@@ -16,7 +16,7 @@ website:
 
 format:
   html:
-    theme: [sandstone, assets/style.scss]
+    theme: journal
     css: assets/styles.css
     include-in-header:
       - file: assets/mathjax.html
