@@ -8,9 +8,9 @@ format:
     code-block-background: true
 ---
 
-|                |                        |                  |    |
-|----------------|------------------------|------------------|----|
-| Week 1: 23 Sep | Semiparametrics intro. | [Kennedy 2018]() | NH |
+| Date           | Topic                  | Paper            | Presenter   |
+|----------------|------------------------|------------------|-------------|
+| Week 1: 23 Sep | Semiparametrics intro. | [Kennedy 2018]() | NH          |
 | Week 2: 07 Oct | TODO |    |    |
 | Week 3: 21 Oct | TODO |    |    |
 | Week 4: 04 Nov | TODO |    |    |
