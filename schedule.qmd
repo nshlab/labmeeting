@@ -1,0 +1,19 @@
+---
+format:
+  html:
+    theme: cosmo
+    css: ../styles.css
+    toc: true
+    code-copy: true
+    code-block-background: true
+---
+
+|                |                        |                  |    |
+|----------------|------------------------|------------------|----|
+| Week 1: 23 Sep | Semiparametrics intro. | [Kennedy 2018]() | NH |
+| Week 2: 07 Oct | TODO |    |    |
+| Week 3: 21 Oct | TODO |    |    |
+| Week 4: 04 Nov | TODO |    |    |
+| Week 5: 18 Nov | TODO |    |    |
+| Week 6: 02 Dec | TODO |    |    |
+| Week 7: 16 Dec | TODO |    |    |

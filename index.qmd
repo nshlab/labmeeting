@@ -1,0 +1,18 @@
+---
+title: "NSH Lab Meetings Calendar"
+subtitle: "HSPH, Fall 2024"
+listing:
+  - id: buttons
+    template: assets/buttons.ejs
+    contents: buttons.yml
+format:
+  html:
+    page-layout: full
+---
+
+::: {#buttons}
+:::
+
+## Schedule
+
+{{< include schedule.qmd >}}

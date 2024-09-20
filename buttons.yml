@@ -1,0 +1,6 @@
+- button: Calendar
+  link: calendar
+  color: purple
+- button: GitHub
+  link: https:/github.com/nshlab/labmeeting/
+  color: green
