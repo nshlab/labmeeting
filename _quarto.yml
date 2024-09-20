@@ -17,7 +17,6 @@ website:
 format:
   html:
     theme: journal
-    css: assets/styles.css
     include-in-header:
       - file: assets/mathjax.html
     # ToC options
