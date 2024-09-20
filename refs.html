@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>schedule – lab meeting</title>
+<title>References – lab meetings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,82 +85,119 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  MathJax = {
+    tex: {
+      tags: 'ams',  // should be 'ams', 'none', or 'all'
+      macros: {
+        E: '{\\mathbb{E}}',
+        V: '{\\mathbb{V}}',
+        P: '{\\mathsf{P}}',
+        M: '{\\mathsf{M}}',
+        Pr: '{\\mathbb{P}}',
+        R: '{\\mathbb{R}}',
+        I: '{\\mathbb{I}}',
+        1: '{\\mathbb{1}}',
+        D: '{\\mathcal{D}}',
+        F: '{\\mathcal{F}}',
+        M: '{\\mathcal{M}}',
+        C: '{\\mathcal{C}}',
+        G: '{\\mathcal{G}}',
+        X: '{\\mathcal{X}}',
+        Z: '{\\mathcal{Z}}',
+        Hold: '{\\mathcal{H}}',
+        lik: '{\\mathcal{L}}',
+        logit: '{\\operatorname{logit}}',
+        expit: '{\\operatorname{expit}}',
+        argmin: '{\\operatorname*{arg\\,min}}',
+        argmax: '{\\operatorname*{arg\\,max}}',
+        indep: '{\\perp\\!\\!\\!\\perp}',
+        notindep: '{\\centernot{\\perp\\!\\!\\!\\perp}}',
+        coloneqq: '{\\mathrel{\\vcenter{:}}=}',
+        iid: '{\\,\\, \\mathbin{\\overset{\\text{iid}}{\\sim}} \\,\\,}',
+        asto: '{\\mathbin{\\underset{a.s.}{\\to}}}',
+        pto: '{\\mathbin{\\underset{p}{\\to}}}',
+        dto: '{\\mathbin{\\underset{d}{\\to}}}'
+      }
+    }
+  };
+</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">References</h1>
+</div>
 
 
 
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Topic</th>
-<th>Paper</th>
-<th>Presenter</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Week 1: 23 Sep</td>
-<td>Semiparametrics intro.</td>
-<td><a href="">Kennedy 2018</a></td>
-<td>NH</td>
-</tr>
-<tr class="even">
-<td>Week 2: 07 Oct</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Week 3: 21 Oct</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Week 4: 04 Nov</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Week 5: 18 Nov</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Week 6: 02 Dec</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Week 7: 16 Dec</td>
-<td>TODO</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-diaz2020machine" class="csl-entry" role="listitem">
+Dı́az, Iván. 2020. <span>“Machine Learning in the Estimation of Causal Effects: Targeted Minimum Loss-Based Estimation and Double/Debiased Machine Learning.”</span> <em>Biostatistics</em> 21 (2): 353–58. <a href="https://doi.org/10.1093/biostatistics/kxz042">https://doi.org/10.1093/biostatistics/kxz042</a>.
+</div>
+<div id="ref-fisher2020visually" class="csl-entry" role="listitem">
+Fisher, Aaron, and Edward H Kennedy. 2020. <span>“Visually Communicating and Teaching Intuition for Influence Functions.”</span> <em>The American Statistician</em> 75 (2): 162–72. <a href="https://doi.org/10.1080/00031305.2020.1717620">https://doi.org/10.1080/00031305.2020.1717620</a>.
+</div>
+<div id="ref-henmi2004paradox" class="csl-entry" role="listitem">
+Henmi, Masayuki, and Shinto Eguchi. 2004. <span>“A Paradox Concerning Nuisance Parameters and Projected Estimating Functions.”</span> <em>Biometrika</em> 91 (4): 929–41. <a href="https://doi.org/10.1093/biomet/91.4.929">https://doi.org/10.1093/biomet/91.4.929</a>.
+</div>
+<div id="ref-hines2022demystifying" class="csl-entry" role="listitem">
+Hines, Oliver, Oliver Dukes, Karla Diaz-Ordaz, and Stijn Vansteelandt. 2022. <span>“Demystifying Statistical Learning Based on Efficient Influence Functions.”</span> <em>The American Statistician</em> 76 (3): 292–304. <a href="https://doi.org/10.1080/00031305.2021.2021984">https://doi.org/10.1080/00031305.2021.2021984</a>.
+</div>
+<div id="ref-kennedy2016semiparametric" class="csl-entry" role="listitem">
+Kennedy, Edward H. 2016. <span>“Semiparametric Theory and Empirical Processes in Causal Inference.”</span> In <em>Statistical Causal Inferences and Their Applications in Public Health Research</em>, edited by Hua He, Pan Wu, and Ding-Geng (Din) Chen, 141–67. Springer. <a href="https://doi.org/10.1007/978-3-319-41259-7_8">https://doi.org/10.1007/978-3-319-41259-7_8</a>.
+</div>
+<div id="ref-kennedy2022semiparametric" class="csl-entry" role="listitem">
+———. 2022. <span>“Semiparametric Doubly Robust Targeted Double Machine Learning: A Review.”</span> <em>arXiv Preprint arXiv:2203.06469</em>. <a href="https://doi.org/10.48550/arXiv.2203.06469">https://doi.org/10.48550/arXiv.2203.06469</a>.
+</div>
+<div id="ref-kosorok2008introduction" class="csl-entry" role="listitem">
+Kosorok, Michael R. 2008. <em>Introduction to Empirical Processes and Semiparametric Inference</em>. Springer. <a href="https://doi.org/10.1007/978-0-387-74978-5">https://doi.org/10.1007/978-0-387-74978-5</a>.
+</div>
+<div id="ref-rytgaard2020phd" class="csl-entry" role="listitem">
+Rytgaard, Helene Charlotte. 2020. <span>“Targeted Causal Learning for Longitudinal Data.”</span> PhD thesis, University of Copenhagen. <a href="https://biostat.ku.dk/dissertations/2020_rytgaard.pdf">https://biostat.ku.dk/dissertations/2020_rytgaard.pdf</a>.
+</div>
+<div id="ref-tsiatis2007semiparametric" class="csl-entry" role="listitem">
+Tsiatis, Anastasios. 2007. <em>Semiparametric Theory and Missing Data</em>. Springer. <a href="https://doi.org/10.1007/0-387-37345-4">https://doi.org/10.1007/0-387-37345-4</a>.
+</div>
+<div id="ref-vdl2003unified" class="csl-entry" role="listitem">
+van der Laan, Mark J, and James M Robins. 2003. <em>Unified Methods for Censored Longitudinal Data and Causality</em>. Springer. <a href="https://doi.org/10.1007/978-0-387-21700-0">https://doi.org/10.1007/978-0-387-21700-0</a>.
+</div>
+<div id="ref-vdl2011targeted" class="csl-entry" role="listitem">
+van der Laan, Mark J, and Sherri Rose. 2011. <em>Targeted Learning: Causal Inference for Observational and Experimental Data</em>. Springer. <a href="https://doi.org/10.1007/978-1-4419-9782-1">https://doi.org/10.1007/978-1-4419-9782-1</a>.
+</div>
+<div id="ref-vdl2018targeted" class="csl-entry" role="listitem">
+———. 2018. <em>Targeted Learning in Data Science: Causal Inference for Complex Longitudinal Studies</em>. Springer. <a href="https://doi.org/10.1007/978-3-319-65304-4">https://doi.org/10.1007/978-3-319-65304-4</a>.
+</div>
+<div id="ref-ying2024geometric" class="csl-entry" role="listitem">
+Ying, Andrew. 2024. <span>“A Geometric Perspective on Double Robustness by Semiparametric Theory and Information Geometry.”</span> <em>arXiv Preprint arXiv:2404.13960</em>. <a href="https://arxiv.org/abs/2404.13960">https://arxiv.org/abs/2404.13960</a>.
+</div>
+</div>
 
 
 
@@ -570,4 +627,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nshlab/labmeeting/edit/main/refs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nshlab/labmeeting/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

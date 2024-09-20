@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSH Lab Meetings Calendar – lab meeting</title>
+<title>NSH Lab Meetings Calendar – lab meetings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -29,8 +49,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,87 +86,57 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-buttons .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-button','listing-link','listing-color',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-button","listing-link","listing-color"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-buttons'] = new List('listing-buttons', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
+  MathJax = {
+    tex: {
+      tags: 'ams',  // should be 'ams', 'none', or 'all'
+      macros: {
+        E: '{\\mathbb{E}}',
+        V: '{\\mathbb{V}}',
+        P: '{\\mathsf{P}}',
+        M: '{\\mathsf{M}}',
+        Pr: '{\\mathbb{P}}',
+        R: '{\\mathbb{R}}',
+        I: '{\\mathbb{I}}',
+        1: '{\\mathbb{1}}',
+        D: '{\\mathcal{D}}',
+        F: '{\\mathcal{F}}',
+        M: '{\\mathcal{M}}',
+        C: '{\\mathcal{C}}',
+        G: '{\\mathcal{G}}',
+        X: '{\\mathcal{X}}',
+        Z: '{\\mathcal{Z}}',
+        Hold: '{\\mathcal{H}}',
+        lik: '{\\mathcal{L}}',
+        logit: '{\\operatorname{logit}}',
+        expit: '{\\operatorname{expit}}',
+        argmin: '{\\operatorname*{arg\\,min}}',
+        argmax: '{\\operatorname*{arg\\,max}}',
+        indep: '{\\perp\\!\\!\\!\\perp}',
+        notindep: '{\\centernot{\\perp\\!\\!\\!\\perp}}',
+        coloneqq: '{\\mathrel{\\vcenter{:}}=}',
+        iid: '{\\,\\, \\mathbin{\\overset{\\text{iid}}{\\sim}} \\,\\,}',
+        asto: '{\\mathbin{\\underset{a.s.}{\\to}}}',
+        pto: '{\\mathbin{\\underset{p}{\\to}}}',
+        dto: '{\\mathbin{\\underset{d}{\\to}}}'
       }
     }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
+  };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="../styles.css">
+
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -158,7 +146,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -170,19 +158,15 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-buttons" class="quarto-listing quarto-listing-container-custom">
-
-  <button style="background-color: purple;"><a href="calendar">Calendar</a></button>
-
-  <button style="background-color: green;"><a href="<https:/github.com/nshlab/labmeeting/>">GitHub</a></button>
-
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 33%">
+<col style="width: 25%">
+<col style="width: 18%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -194,43 +178,43 @@ No matching items
 <tbody>
 <tr class="odd">
 <td>Week 1: 23 Sep</td>
-<td>Semiparametrics intro.</td>
-<td><a href="">Kennedy 2018</a></td>
+<td>Causality and semiparametrics</td>
+<td><span class="citation" data-cites="kennedy2016semiparametric">Kennedy (<a href="#ref-kennedy2016semiparametric" role="doc-biblioref">2016</a>)</span>, Ch. 2 of <span class="citation" data-cites="rytgaard2020phd">Rytgaard (<a href="#ref-rytgaard2020phd" role="doc-biblioref">2020</a>)</span></td>
 <td>NH</td>
 </tr>
 <tr class="even">
 <td>Week 2: 07 Oct</td>
-<td>TODO</td>
-<td></td>
+<td>Causality and semiparametrics</td>
+<td>Ch. 1-3 of <span class="citation" data-cites="tsiatis2007semiparametric">Tsiatis (<a href="#ref-tsiatis2007semiparametric" role="doc-biblioref">2007</a>)</span>, Ch. 3 of <span class="citation" data-cites="rytgaard2020phd">Rytgaard (<a href="#ref-rytgaard2020phd" role="doc-biblioref">2020</a>)</span></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Week 3: 21 Oct</td>
-<td>TODO</td>
-<td></td>
+<td>Coarsened data and semiparametrics</td>
+<td>Ch. 6-7 of <span class="citation" data-cites="tsiatis2007semiparametric">Tsiatis (<a href="#ref-tsiatis2007semiparametric" role="doc-biblioref">2007</a>)</span></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Week 4: 04 Nov</td>
-<td>TODO</td>
-<td></td>
+<td>Targeted machine learning</td>
+<td>Ch. 4 of <span class="citation" data-cites="rytgaard2020phd">Rytgaard (<a href="#ref-rytgaard2020phd" role="doc-biblioref">2020</a>)</span> and <span class="citation" data-cites="kennedy2022semiparametric">Kennedy (<a href="#ref-kennedy2022semiparametric" role="doc-biblioref">2022</a>)</span></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Week 5: 18 Nov</td>
-<td>TODO</td>
-<td></td>
+<td>Targeted machine learning</td>
+<td><span class="citation" data-cites="kennedy2022semiparametric">Kennedy (<a href="#ref-kennedy2022semiparametric" role="doc-biblioref">2022</a>)</span></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Week 6: 02 Dec</td>
-<td>TODO</td>
+<td>Special topics</td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Week 7: 16 Dec</td>
-<td>TODO</td>
+<td>Special topics</td>
 <td></td>
 <td></td>
 </tr>
@@ -241,7 +225,20 @@ No matching items
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kennedy2016semiparametric" class="csl-entry" role="listitem">
+Kennedy, Edward H. 2016. <span>“Semiparametric Theory and Empirical Processes in Causal Inference.”</span> In <em>Statistical Causal Inferences and Their Applications in Public Health Research</em>, edited by Hua He, Pan Wu, and Ding-Geng (Din) Chen, 141–67. Springer. <a href="https://doi.org/10.1007/978-3-319-41259-7_8">https://doi.org/10.1007/978-3-319-41259-7_8</a>.
+</div>
+<div id="ref-kennedy2022semiparametric" class="csl-entry" role="listitem">
+———. 2022. <span>“Semiparametric Doubly Robust Targeted Double Machine Learning: A Review.”</span> <em>arXiv Preprint arXiv:2203.06469</em>. <a href="https://doi.org/10.48550/arXiv.2203.06469">https://doi.org/10.48550/arXiv.2203.06469</a>.
+</div>
+<div id="ref-rytgaard2020phd" class="csl-entry" role="listitem">
+Rytgaard, Helene Charlotte. 2020. <span>“Targeted Causal Learning for Longitudinal Data.”</span> PhD thesis, University of Copenhagen. <a href="https://biostat.ku.dk/dissertations/2020_rytgaard.pdf">https://biostat.ku.dk/dissertations/2020_rytgaard.pdf</a>.
+</div>
+<div id="ref-tsiatis2007semiparametric" class="csl-entry" role="listitem">
+Tsiatis, Anastasios. 2007. <em>Semiparametric Theory and Missing Data</em>. Springer. <a href="https://doi.org/10.1007/0-387-37345-4">https://doi.org/10.1007/0-387-37345-4</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -667,4 +664,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nshlab/labmeeting/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nshlab/labmeeting/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
