@@ -38,12 +38,12 @@ jobs:
       - name: Render Only
         uses: quarto-dev/quarto-actions/render@v2
 
-      #- name: Render and Publish
-        #uses: quarto-dev/quarto-actions/publish@v2
-        #with:
-          ##target: gh-pages
-          ##render: true
-          ##GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #target: netlify
           #render: true
           #NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
