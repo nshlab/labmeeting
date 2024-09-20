@@ -1,18 +1,19 @@
 ---
 title: "NSH Lab Meetings Calendar"
 subtitle: "HSPH, Fall 2024"
-listing:
-  - id: buttons
-    template: assets/buttons.ejs
-    contents: buttons.yml
 format:
   html:
     page-layout: full
 ---
 
-::: {#buttons}
-:::
-
 ## Schedule
 
-{{< include schedule.qmd >}}
+| Date           | Topic                  | Paper            | Presenter   |
+|----------------|------------------------|------------------|-------------|
+| Week 1: 23 Sep | Causality and semiparametrics | @kennedy2016semiparametric, Ch. 2 of @rytgaard2020phd | NH |
+| Week 2: 07 Oct | Causality and semiparametrics | Ch. 1-3 of @tsiatis2007semiparametric, Ch. 3 of @rytgaard2020phd |    |
+| Week 3: 21 Oct | Coarsened data and semiparametrics | Ch. 6-7 of @tsiatis2007semiparametric |    |
+| Week 4: 04 Nov | Targeted machine learning | Ch. 4 of @rytgaard2020phd and @kennedy2022semiparametric |    |
+| Week 5: 18 Nov | Targeted machine learning | @kennedy2022semiparametric |    |
+| Week 6: 02 Dec | Special topics |    |    |
+| Week 7: 16 Dec | Special topics |    |    |

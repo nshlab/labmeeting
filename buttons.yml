@@ -1,6 +1,6 @@
-- button: Calendar
-  link: calendar
+- button: References
+  link: refs
   color: purple
 - button: GitHub
-  link: <https:/github.com/nshlab/labmeeting/>
-  color: green
+  link: https:/github.com/nshlab/labmeeting/
+  color: red

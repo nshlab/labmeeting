@@ -1,11 +1,43 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+  #echo: false
+  warning: false
+  message: false
+
 website:
-  title: "lab meeting"
+  title: "lab meetings"
+  site-url: https://nshlab.github.io/labmeeting/
+  repo-url: https://github.com/nshlab/labmeeting/
+  repo-branch: main
+  repo-actions: [edit, issue]
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    theme: [sandstone, assets/style.scss]
+    css: assets/styles.css
+    include-in-header:
+      - file: assets/mathjax.html
+    # ToC options
+    toc: false
+    toc-depth: 2
+    toc-title: Contents
+    # citation/reference location
+    reference-location: margin
+    citation-location: document
+    # figure options
+    fig-width: 8
+    fig-asp: 0.618
+    # code block options
+    code-copy: true
+    code-link: true
+    code-fold: true
+    code-tools: false
+    code-line-numbers: true
+    code-block-background: true
+    highlight-style: ayu-mirage
+
+bibliography: refs.bib
+editor: visual
