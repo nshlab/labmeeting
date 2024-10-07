@@ -45,8 +45,8 @@ jobs:
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-          render: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #target: netlify
-          #render: true
+          render: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
