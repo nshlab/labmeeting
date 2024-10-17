@@ -11,11 +11,11 @@ format:
 | Date                      | Topic                  | Paper            | Presenter   |
 |---------------------------|------------------------|------------------|-------------|
 | 23^rd^ September (Week 1) | Introduction to longitudinal causal infernece | Ch. 2 of @rytgaard2020phd | NSH |
-| 7^th^ October (Week 2)    | Overview of semi-parametric theory in causal inference | finish Ch. 2 of @rytgaard2020phd, Ch. 3.1 and 3.2 of @rytgaard2020phd and related from @kennedy2016semiparametric | SVB |
-| 21^st^ October (Week 3)   | Another looks at longitudinal causal inference | Ch. 19-21 of @hernan2023causal | CT |
-| 4^th^ November (Week 4)   | Even more on longitudinal causal inference | Ch. 4 and 15 of @vdl2018targeted (tentative) | NSH |
+| 7^th^ October (Week 2)    | Overview of semi-parametric estimation in causal inference | finish Ch. 2 of @rytgaard2020phd, Ch. 3.1 and 3.2 of @rytgaard2020phd and related from @kennedy2016semiparametric | SVB |
+| 21^st^ October (Week 3)   | Building blocks of longitudinal causal inference | Ch. 19-21 of @hernan2023causal | CT |
+| 4^th^ November (Week 4)   | Semi-parametric estimation in longitudinal causal inference | TBD | CJ |
 | 18^th^ November (Week 5)  | TBD | TBA |    |
 | 2^nd^ December (Week 6)   | TBD | TBA |    |
 | 16^th^ December (Week 7)  | TBD | TBA |    |
 
-: All meetings are on Mondays 2-3pm ET and all meetings will be held *in person only* in HSPH 2-426.
+: All meetings are on Mondays 2-3pm ET and will be held *in person only* in HSPH 2-426.
