@@ -13,7 +13,7 @@ format:
 | 23^rd^ September (Week 1) | Introduction to longitudinal causal infernece | Ch. 2 of @rytgaard2020phd | NSH |
 | 7^th^ October (Week 2)    | Overview of semi-parametric estimation in causal inference | finish Ch. 2 of @rytgaard2020phd, Sec. 3.1-3.2 of @rytgaard2020phd, and @kennedy2016semiparametric | SVB |
 | 21^st^ October (Week 3)   | Building blocks of longitudinal causal inference | Ch. 19-21 of @hernan2023causal | CT |
-| 4^th^ November (Week 4)   | Semi-parametric estimation in longitudinal causal models | @bang2005doubly and @vdl2012targeted | CJ |
+| 4^th^ November (Week 4)   | Semi-parametric estimation in longitudinal causal models | @bang2005doubly, @kennedy2022semiparametric (Ex. 7) and @vdl2012targeted (Thm. 1) | CJ |
 | 18^th^ November (Week 5)  | A geometric perspective on double robustness | @ying2024geometric | NSH |
 | 4^th^ December (Week 6)   | Influence functions: Visual communication and intuition | @fisher2020visually | CJ |
 | 16^th^ December (Week 7)  | Longitudinal causal inference with historical controls | @liu2023causal | NH |
