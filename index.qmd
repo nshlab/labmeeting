@@ -15,5 +15,5 @@ format:
 | 21^st^ October (Week 3)   | Building blocks of longitudinal causal inference | Ch. 19-21 of @hernan2023causal | CT |
 | 4^th^ November (Week 4)   | Semi-parametric estimation in longitudinal causal models | @bang2005doubly, @kennedy2022semiparametric (Ex. 7) and @vdl2012targeted (Thm. 1) | CJ |
 | 18^th^ November (Week 5)  | Double robustness, semi-parametrics, and information geometry | @ying2024geometric (1^st^ attempt) | NSH |
-| 4^th^ December (Week 6)   | Influence functions: Visual communication and intuition | @fisher2020visually | CJ |
+| 4^th^ December (Week 6)   | Influence functions: Visual communication and intuition | @fisher2020visually @herbps10_2023| CJ |
 | 16^th^ December (Week 7)  | Double robustness, semi-parametrics, and information geometry | @ying2024geometric (2^nd^ attempt) | NH |
