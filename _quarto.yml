@@ -41,7 +41,7 @@ website:
 
 format:
   html:
-    theme: [sandstone, style.scss]
+    theme: [sandstone, styles.scss]
     include-in-header:
       - file: mathjax.html
     # ToC options
