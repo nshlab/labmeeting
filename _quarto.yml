@@ -43,7 +43,7 @@ format:
   html:
     theme: [sandstone, style.scss]
     include-in-header:
-      - file: assets/mathjax.html
+      - file: mathjax.html
     # ToC options
     toc: false
     toc-depth: 2
