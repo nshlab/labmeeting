@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!notes/"
 
 execute:
   freeze: auto
@@ -8,15 +11,37 @@ execute:
   message: false
 
 website:
-  title: "lab meetings"
-  site-url: https://nshlab.github.io/labmeeting/
+  title: ""
+  navbar:
+    title: ""
+    # logo: img/nshlab.png
+    search: true
+    left:
+      - href: "/"
+        text: Calendar
+        icon: calendar-check
+      - href: sidebar:archive
+        # text: Archive
+        icon: archive
+    right:
+      - href: https://nimahejazi.org
+        text: NSH Lab
+        icon: house
+  sidebar:
+    - id: archive
+      # icon: archive
+      title: "Archive"
+      contents:
+        - auto: archive
+  site-url: https://lab.nimahejazi.org/labmeeting/
   repo-url: https://github.com/nshlab/labmeeting/
   repo-branch: main
   repo-actions: [edit, issue]
+  google-analytics: "UA-67244126-3"
 
 format:
   html:
-    theme: journal
+    theme: [sandstone, style.scss]
     include-in-header:
       - file: assets/mathjax.html
     # ToC options
@@ -35,8 +60,11 @@ format:
     code-fold: true
     code-tools: false
     code-line-numbers: true
-    code-block-background: true
-    highlight-style: ayu-mirage
+    code-block-bg: dark
+    highlight-style: zenburn
+    smooth-scroll: true
+    citations-hover: true
+    footnotes-hover: true
+    # code block options
 
 bibliography: refs.bib
-editor: visual
