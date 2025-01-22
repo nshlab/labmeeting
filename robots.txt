@@ -1,1 +1,1 @@
-Sitemap: https://nshlab.github.io/labmeeting/sitemap.xml
+Sitemap: https://lab.nimahejazi.org/labmeeting/sitemap.xml
