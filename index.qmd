@@ -6,13 +6,13 @@ title: "Spring 2025"
 
 | Date            | Topic                  | Reading          | Presenter   |
 |-----------------|------------------------|------------------|-------------|
-| 3^rd^ February  |  | @kosorok2008introduction |  |
-| 17^th^ February |  | @kosorok2008introduction |  |
-| 3^rd^ March     |  | |  |
-| 17^th^ March    |  |  |  |
-| 31^st^ March    |  | @vdvaart1998asymptotic |  |
-| 14^th^ April    |  | @vdvaart1998asymptotic |  |
-| 5^th^ May       |  |  |  |
+| 3^rd^ February  | Overview of M- and Z-estimation | @vdvaart1998asymptotic, Ch. 5; and @kosorok2008introduction, Ch. 1-3 | Who, me? |
+| 17^th^ February | Some empirical process theory | @vdvaart1998asymptotic, Ch. 7-9; and @kosorok2008introduction, Ch. 5-6 | Who, me? |
+| 3^rd^ March     | More empirical process theory | @kosorok2008introduction, Ch. 7-8; and @vdvaart1998asymptotic, Ch. 18-19 | Who, me? |
+| 17^th^ March    | The functional delta method | @kosorok2008introduction, Ch. 12-14; and @vdvaart1998asymptotic, Ch. 20 | Who, me? |
+| 31^st^ March    |  | @kosorok2008introduction, Ch. 16-18; and @vdl2011targeted, Appx. A.1-A.6 | Who, me? |
+| 14^th^ April    |  | @kosorok2008introduction, Ch. 19.1-19.2, 20, 21.1-21.2; and @vdl2003unified, Ch. 1.2, 1.4, 1.5 | Who, me? |
+| 5^th^ May       |  |  | Who, me? |
 
 : Our meetings will usually be held on Mondays, 3:30-5:00 PM, in HSPH 2-426.
 
