@@ -7,7 +7,7 @@ title: "Spring 2025"
 | Date            | Topic                  | Reading          | Presenter   |
 |-----------------|------------------------|------------------|-------------|
 | 3^rd^ February  | Overview of M- and Z-estimation | Ch. 5 of @vdvaart1998asymptotic and Ch. 1-3 of @kosorok2008introduction. | NH |
-| 18^th^ February | Some empirical process theory | Ch. 7-9 of @vdvaart1998asymptotic and Ch. 5-6 of @kosorok2008introduction. | Who, me? |
+| 18^th^ February | Some empirical process theory | Ch. 7-9 of @vdvaart1998asymptotic and Ch. 5-6 of @kosorok2008introduction. | CT |
 | 3^rd^ March     | More empirical process theory | Ch. 7-8 of @kosorok2008introduction and Ch. 18-19 of @vdvaart1998asymptotic. | SVB |
 | 17^th^ March    | The functional delta method | Ch. 12-14 of @kosorok2008introduction and Ch. 20 of @vdvaart1998asymptotic. | Who, me? |
 | 31^st^ March    |  | Ch. 16-18 of @kosorok2008introduction and Appx. A.1-A.6 of @vdl2011targeted. | Who, me? |
