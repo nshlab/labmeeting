@@ -1,0 +1,408 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+This writeup contains a narrativized version of my lab meeting talk on
+empirical process theory from van der Vaart (1998) Ch. 18-19 and Korosok
+(2008) Ch. 7-8. Enjoy! 
+
+\section{Why use empirical process theory?}
+
+A \emph{functional} is a function of a function. One of the most famous
+functionals is the integral of a function \(f\) over some probability
+measure \(P = \int dP\), which can be denoted using the ``operator
+notation'':\[Pf = \int f dP\]Something nice about integrals is that they
+lend themselves easily to approximation. Think about how a Riemann
+integral was taught to you as sum of infinitely small rectangles. You
+probably learned to approximate the integral by selecting a series of
+function values, converting the space underneath them into small
+rectangles, and summing their area.
+
+If all we have access to is a \emph{random} set of \(n\) points, we can
+do something similar. Specifically, we can approximate the measure \(P\)
+by the \textbf{empirical measure}
+\[\mathbb{P}_n = \sum_{i=1}^n \frac{\delta(X_i)}{n}\] which places
+\(1/n\) worth of mass at each observed value. Integrating over this
+empirical measure is then denoted
+\[\mathbb{P}_nf = \frac{1}{n}\sum_{i=1}^n f(X_i)\] \textbf{Empirical
+process theory} helps us answer the question: when does the empirical
+measure approximate the true measure? The answer to that question
+depends on how complex \(f\) is allowed to be. Suppose \(f\) is in some
+set of functions \(\mathcal{F}\). An \textbf{empirical process} is
+defined as the functional
+\[\mathbb{G}_n f = \sqrt{n}(\mathbb{P}_nf - Pf)\] which is a map
+\(\mathcal{F} \mapsto \mathcal{G}\). This should remind you of the
+central limit theorem (CLT):
+\[\sqrt{n}\Big(\frac{1}{n}\sum_{i=1}^nX_i - E(X_i)\Big) \leadsto \text{Normal}(0, \text{Var}(X_i))\]
+which holds when \(X_i\) has finite variance. The CLT tells us that
+empirical means cluster around the true mean at rate \(1/n\). If all
+\(f(X_i)\) have finite variance, it also tells us that \(\mathbb{G}_nf\)
+converges \emph{pointwise} on the set of functions \(\mathcal{F}\).
+
+However, \emph{if we consider integration as the function itself} (a
+functional), empirical process theory tells us how the ``operation'' of
+integration as a whole behaves as \(f\) may change throughout the set of
+functions \(\mathcal{F}\). Specifically, it tells us whether
+\(\mathbb{G}_n f\) converges \emph{uniformly} across all possible
+functions, meaning that there is a bound on the error of approximation
+over all functions in \(\mathcal{F}\).
+
+If \(\mathcal{F}\) is sufficiently simple enough, then it turns out that
+as \(n\rightarrow \infty\) , the functional itself is ``normal'' and
+converges uniformly across all functions. This can be very useful for
+many different purposes: 
+\begin{itemize}
+\item Proving the convergence of empirical
+distribution functions (and procedures that depend on them). 
+\item Proving
+convergence of estimators that depend on plugging in estimates of
+``nuisance parameters''. 
+\item Proving that statistical learning algorithms
+converge to the true underlying function. 
+\item Proving the consistency of
+resampling procedures such as the bootstrap.
+\end{itemize}
+
+But what does it mean for a \emph{functional} to converge to a
+``normal'' distribution? Is there a functional analogue of the normal?
+Let's remind ourselves of a few definitions before diving in.
+
+\section{What is a random function?}\label{what-is-a-random-function}
+
+Since an integral operates on functions, we need to figure out what it
+means to operate on a \emph{random} function. A random function is
+essentially equivalent to the more ubiquitous concept of a
+\emph{stochastic process}. Notationally, stochastic processes are
+typically denoted as \[X = \{X(t) : t \in T\}\] that is, a collection of
+random variables indexed by some set \(T\). Alternatively, we can think
+of \(X\) as a function that maps every \(t \in T\) to a random variable
+\(X(t)\). A random draw of \(X\), called a \emph{sample path},
+represents drawing a random function from a set. If \(T = \mathcal{F}\),
+then this sample path is a random functional.
+
+A \emph{Gaussian process} is the function analogue of the normal
+distribution. A Gaussian process is a stochastic process where the
+random vector \([X(t_1),\ldots,X(t_k)]\) is multivariate normal for any
+finite subset \(\{t_1,\ldots, t_k\} \subset T\).
+
+Functions do not reside in \(\mathbb{R}\) like regular numbers; instead,
+they belong to a metric space \(\mathbb{D}\), which is a set equipped
+with a \textbf{distance metric} \(d\) such that for all
+\(x, y \in \mathbb{D}\), 
+
+\begin{enumerate}
+	\item \(x\neq y \implies d(x,y) > 0\)
+	\item \(d(x,x) = 0\)
+	\item \(d(x,y) = d(y,x)\) (symmetry)
+	\item \(d(x,y) \leq d(x,z) + d(z, y)\) (triangle inequality)
+\end{enumerate}
+
+Some distances you've probably heard of are the L2 distance
+\(||x - y||_{\ell_2} = \sqrt{\sum{(x_i - y_i)^2}}\) or the L1 distance
+\(||x-y||_{\ell_1} = \sum{|x_i - y_i|}\). For a set of functions, we can
+define a \(r\)-norm distance as an integral of a function:
+\((P|f|^r)^{1/r}\). We can use this more general notion of distance to
+describe the convergence of random functions.
+
+\section{Convergence of random
+functions}\label{convergence-of-random-functions}
+
+Remember that an integral operates on a function space. Function spaces
+are a type of metric space, so we can analyze the convergence of random
+functions using metrics. Despite being random, elements in a metric
+space may not admit a distribution function (i.e.~may not be
+Borel-measurable). Therefore, to reason about the convergence of
+functions, we need to do so using the metric.
+
+The three common modes of stochastic convergence from classical
+statistical theory also admit representations on metric spaces:
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Convergence in Distribution:} \(X_n \leadsto X\) if
+  \(E^* f(X_n) \rightarrow Ef(X)\) for all bounded, continuous
+  \(f : \mathbb{D} \mapsto \mathbb{R}\)
+\item
+  \emph{Convergence in Probability}: \(X_n \overset{p}{\rightarrow}X\)
+  if \(P^*(d(X_n, X) > \varepsilon) \rightarrow 0\) for all
+  \(\varepsilon > 0\)
+\item
+  \emph{Convergence Almost Surely}: \(X_n \overset{as}{\rightarrow}X\)
+  if \(d(X_n, X) \leq \Delta_n\) for all
+  \(\Delta_n \overset{as}{\rightarrow} 0\).
+\end{itemize}
+
+Here, \(E^*\) and \(P^*\) refer to ``outer expectation and probability''
+respectively; they are used to handle the fact that computing the
+expectation of \(f(X_n)\) may not be possible (because \(f(X_n)\) is not
+measurable). If we consider a collection of random variables \(U\)
+dominating \(X\), then \(E^\star X = \inf_{U \geq X} EU\) ---
+intuitively, this just means ``if \(X\) isn't measurable, just take the
+closest random object that is''. Similarly, \(P^\star(X) = E^* 1(X)\),
+where \(1\) denotes the indicator function of \(X\) happening.
+Unfortunately, almost sure convergence has no easy analogue in outer
+probability.
+
+From these, most of the same properties from classical asymptopia hold,
+including the portmanteau lemma, Slutsky's theorem, Prohorov's theorem,
+and a slightly stronger version of the continuous mapping theorem. See
+van der Vaart (1998) for specific details.
+
+We will typically consider the metric space \(\ell^{\infty}(T)\), the
+set of all bounded functions on \(T\) equipped with the metric
+\(||f||_\infty = \sup_{f \in \mathcal{F}} |f(t)|\). In this metric
+space, there is a more precise way to actually prove the convergence of
+a functional in distribution:
+
+\textbf{van der Vaart Thm 18.14}:
+\(X_n : \Omega_n \mapsto \ell^\infty(T) \leadsto X\) if and only if the
+following hold: 
+
+\begin{enumerate}
+	\item \textbf{Convergence of Marginals:}
+	\([X_{n, t_1}, \ldots, X_{n, t_k}]\ \leadsto [X_{t_1},\ldots,X_{t_k}]\)
+	for all finite sets \(t_1, \ldots, t_k \in T\).
+	\item \textbf{Asymptotically uniformly equicontinuity:} For all
+	\(\varepsilon, \eta > 0\), there exists a partition \(T_1, \ldots, T_k\)
+	of \(T\) such that
+	\[\lim_{n\rightarrow\infty}\sup P^\star(\sup_i\sup_{s,t \in T_i} |X_{n,s} - X_{n,t}|\geq \varepsilon) \leq \eta\]
+	Korosorok (2008) spends a lot of time proving that condition (2) is
+	equivalent to a condition called ``asymptotic tightness'' --- see
+	Chapters 7 and 8 for details. Regardless, this version of convergence in
+	distribution leads to two major asymptotic theorems.
+\end{enumerate}
+
+
+\section{Functional versions of major asymptotic theorems}
+
+The empirical process \(\mathbb{G}_n\) is a function whose domain is the
+set of functions \(\mathcal{F}\). The two major asymptotic tools in
+statistics are the law of large numbers (means converge almost surely)
+and the central limit theorem (means are approximately normal at rate
+\(\sqrt{n}\)). If these hold uniformly over \(f \in \mathcal{F}\), then
+\(\mathcal{F}\) is considered a special class of functions:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathcal{F}\) is \textbf{Glivenko-Cantelli} if
+  \(\sup_{f \in \mathcal{F}} | \mathbb{P}_n f - Pf| \overset{as}{\rightarrow} 0\)
+  (``functional'' LLN)
+\item
+  \(\mathcal{F}\) is \textbf{Donsker} if
+  \(\mathbb{G_n}f = \sqrt{n}(\mathbb{P}_nf - Pf) \leadsto\) a tight
+  limit in \(\ell^\infty(\mathcal{F})\) (``functional'' CLT)
+\end{itemize}
+
+If \(\mathcal{F}\) is Donsker, it is also Glivenko-Cantelli; hence, the
+remainder of this tutorial will focus on proving Donsker classes. If
+\(\mathcal{F}\) is a finite set, then it is trivially Donsker. This is
+because Condition 1 of Theorem 18.14 is satisfied by the Central Limit
+Theorem, and Condition 2 is satisfied because \(T\) is bounded in size.
+For more complex classes with infinite functions, proving that condition
+2 holds is the main challenge. This challenge has traditionally been
+addressed by measuring the complexity of the function class --- a.k.a.
+its ``entropy'' --- using various techniques.
+
+\section{Proving Glivenko-Cantelli and Donsker
+classes}\label{proving-glivenko-cantelli-and-donsker-classes}
+
+If \(\mathcal{F}\) is finite, then \(Pf < \infty\) implies
+\(\mathcal{F}\) is Glivenko-Cantelli and \(Pf^2 < \infty\) implies it is
+Donsker. Otherwise, proving a class of functions is GC or Donsker
+generally requires some way of measure function complexity (called
+``entropy''). There are several strategies:
+
+\subsection{Method 1: Bracketing
+Entropy}\label{method-1-bracketing-entropy}
+
+One way to measure the complexity of a function class is via its
+bracketing number. Consider the \(L_r(P)\) norm, \((P|f|^r)^{1/r}\),
+measuring the distance between two functions. An
+\emph{\(\varepsilon\)-bracket} is a tuple of functions \((u, l)\) (for
+``upper'' and ``lower'') satisfying \(P(u -l)^r < \varepsilon^r\) ; that
+is, \(u\) and \(l\) have less than \(\varepsilon\) distance between
+them.
+
+The \textbf{bracketing number}
+\(N_{[]}(\varepsilon, \mathcal{F}, L_r(P))\) is the minimum number of
+\(\varepsilon\)-brackets needed to cover the entire function class (and
+its log is the ``bracketing entropy''). Then, van der Vaart provides the
+following theorems:
+
+\textbf{Thm 19.4}: \(\mathcal{F}\) is Glivenko-Cantellli iff
+\(N_{[]}(\varepsilon, \mathcal{F}, L_1(P)) < \infty\) \textbf{Thm
+19.45}: \(\mathcal{F}\) is Donsker iff
+\[\int_{0}^{1}\sqrt{\log N_{[]}(\varepsilon, \mathcal{F}, L_2(P))}d\varepsilon < \infty\]
+\emph{Examples} 
+
+\begin{itemize}
+	\item eCDF (indicator functions)
+	\item Parametric classes with \(f_\theta\) Lipschitz
+	\item Smooth functions with bounded derivatives
+	\item Functions of bounded variation
+	\item Sobolev classes (\(||f||_\infty \leq 1\),
+	\(\int (f^{(k)})^2(x)dx \leq 1\))
+\end{itemize}
+
+\subsection{Method 2: Covering
+Entropy}\label{method-2-covering-entropy}
+
+We can also measure the complexity by attempting to cover the entire
+function class with balls of radius \(\varepsilon\). The
+\textbf{covering number} \(N(\varepsilon, \mathcal{F}, L_r(Q))\) is the
+minimum number of \(\varepsilon\)-balls in \(L_r(Q)\) needed to cover
+\(\mathcal{F}\). Again, van der Vaart provides two theorems based on
+this:
+
+\textbf{Thm 19.13}: \(\mathcal{F}\) is Glivenko-Cantellli iff,
+\(\forall \varepsilon > 0\) and \(P^\star F < \infty\),
+\[\sup_{Q}N(\varepsilon||F||_{Q,1}, \mathcal{F}, L_1(Q)) < \infty\]
+(``uniform'' covering number is finite)
+
+\textbf{Thm 19.14}: \(\mathcal{F}\) is Donsker iff
+\(P^\star F^2 < \infty\) and
+\[\int_{0}^{1}\sqrt{\log\sup_{Q}N(\varepsilon||F||_{Q,2}, \mathcal{F}, L_2(Q))} < \infty\]
+This type of complexity can also be expressed via the \textbf{packing
+number} \(D(\varepsilon, \mathcal{F}, L_r(Q))\) , the maximum number of
+points that fit in \(\mathcal{F}\) while maintaining a distance
+\(\geq \varepsilon\) from each other. This is because
+\(N(\varepsilon, \mathcal{F}, d) \leq D(\varepsilon, \mathcal{F}, d) \leq N(\varepsilon/2, \mathcal{F}, d)\).
+
+Furthermore, covering numbers also connect to empirical process theory
+to another well-known area of research in function estimation:
+Vapnik-Chernvonenkis (VC) classes.
+
+\textbf{VC Class}: Consider a sample space \(\mathcal{X}\), some
+collection of subsets of the sample space
+\(C = \{C_1, C_2, \ldots : C_i \subset \mathcal{X}\}\), and a fixed
+sample \(\mathbb{X} = \{x_1, \ldots x_n\}\). \(C\) is said to
+``shatter'' \(\mathbb{X}\) if it includes all \(2^n\) possible subsets
+of \(\mathbb{X}\).
+
+A VC class is defined by its \emph{VC dimension} \(V(C) =\) smallest
+\(n\) for which no fixed sample of size \(n\) can be shattered by \(C\).
+Specifically, \(\mathcal{F}\) is a VC class if
+\(\{(x,t) : f(x) < t, f \in \mathcal{F}\}\) is a VC class of sets in
+\(\mathcal{X} \times \mathbb{R}\).
+
+Interestingly, the VC dimension provides a bound on the covering number:
+\[\sup_{Q}N(\varepsilon||F||_{Q,r}, \mathcal{F}, L_r(Q)) \leq K\cdot V(\mathcal{F})(16e)^{V(\mathcal{F})}(1/\varepsilon)^{r(V(\mathcal{F}) - 1)}\]
+so VC classes are Donsker if \(P^\star F^2 < \infty\).
+
+\emph{Examples}: 
+\begin{itemize}
+	\item Cells \((-\infty, t]\) in the real line
+	(\(V(\mathcal{C}) = 2\))
+	\item Linear combinations of finite sets of
+	functions (i.e.~polynomials)
+\end{itemize} 
+
+\subsection{Method 3: Constructing from Existing
+Donsker Classes}
+
+All Donsker classes are also Glivenko-Cantelli. Many
+types of operations preserve Donsker classes. If \(\mathcal{F}\) and
+\(\mathcal{G}\) are both Donsker, then the following are also Donsker:
+
+\begin{itemize}
+\tightlist
+\item
+  Subset: \(\mathcal{F}_0 \subset \mathcal{F}\)
+\item
+  Union: \(\mathcal{F} \cup \mathcal{G}\)
+\item
+  The collections of \(f \in \mathcal{F}\) and \(g \in \mathcal{G}\)
+  consisting of:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\min(f, g)\)
+  \item
+    \(\max(f, g)\)
+  \item
+    \(f + g\)
+  \item
+    \(fg\)
+  \item
+    \(\phi(f,g)\), if \(\phi\) is fixed and Lipschitz
+  \end{itemize}
+\end{itemize}
+
+Sometimes, it is far easier to show that a class is Donsker by
+constructing its elements from smaller Donsker classes, such as
+indicator functions or finite polynomials. 
+
+\section{Why does entropy determine a Donsker class?} 
+Recall that for \(\mathcal{F}\) to be
+Donsker, we really just need to prove the asymptotic equicontinuity
+condition for a partition \(\mathcal{F}_1,\ldots,\mathcal{F}_k\):
+\[\lim_{n\rightarrow\infty}\sup P^\star(\sup_i\sup_{s,t \in \mathcal{F}_i} |X_{n,s} - X_{n,t}|\geq \varepsilon) \leq \eta\]
+This is essentially accomplished by: 
+\begin{enumerate}
+	\item Partitioning
+	\(\mathcal{F} = \cup \mathcal{F}_i\) using brackets, covers, or some
+	other tool
+	\item Bounding \(E^*\sup_i \sup_{f,g} |\mathbb{G}_n(f-g)|\)
+	using maximal inequalities.
+\end{enumerate}
+
+There are two major strategies for proving (2) for a given choice of
+partition: \textbf{symmetrization} and \textbf{chaining}. Van der Vaart
+(1998) accomplishes the second step using ``Lemma 19.34'' which proves a
+bound on the bracketing number using chaining. Korosok attacks covering
+numbers using both techniques through a series of lemmas. Let's take a
+look at how these techniques are used (TO BE CONTINUED\ldots)
+
+\end{document}
