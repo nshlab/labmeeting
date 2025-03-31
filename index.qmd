@@ -13,12 +13,12 @@ title: "Spring 2025"
 | 31^st^ March    | Efficient semiparametric inference | Ch. 16-17  and Sec. 18.1 of @kosorok2008introduction. | NSH |
 | 14^th^ April (Tuesday)    | Efficient semiparametric inference | Sec. 18.2-18.3 of @kosorok2008introduction and Appx. A.1-A.5 of @vdl2011targeted. | NSH |
 | 5^th^ May    | Efficient semiparametric inference | Sec. 19.1-19.2, Ch. 20, and Sec. 21.1-21.2 of @kosorok2008introduction. | NH |
-<!--
-| 5^th^ May       |  | {{< fa triangle-exclamation >}} Sec. 1.2, 1.4, 1.5, and 1.6 of @vdl2003unified. {{< fa triangle-exclamation >}} | NSH |
--->
 
 : Our meetings will *usually* be held **on Mondays**, 3:30-5:00 PM, in HSPH 2-426.
 
+<!--
+| 5^th^ May       |  | {{< fa triangle-exclamation >}} Sec. 1.2, 1.4, 1.5, and 1.6 of @vdl2003unified. {{< fa triangle-exclamation >}} | NSH |
+-->
 
 ## References
 
