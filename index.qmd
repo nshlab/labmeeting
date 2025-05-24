@@ -19,17 +19,10 @@ title: "Fall 2025"
 : We will meet biweekly **on Wednesdays**, 11:00AM-1:00PM, in HSPH 2-426.
 
 
-In the upcoming Fall term, we will tentatively discuss topics in statistical
+In the upcoming Fall term, we will tentatively discuss various topics in statistical
 learning theory and statistical machine learning, with specific material drawn
-from and references made to the following texts:
-
-- *High-Dimensional Statistics: A Non-Asymptotic Viewpoint*
-  [@wainwright2019highdim]
-- *Introduction to Nonparametric Estimation* [@tsybakov2019introduction]
-- *Concentration Inequalities: A Nonasymptotic Theory of Independence*
-  [@boucheron2013concentration]
-- *Statistics and Information Theory* [@duchi2024statistics]
-- *Learning Theory from First Principles* [@bach2024learning]
+from and references made to the following texts: @wainwright2019highdim,
+@boucheron2013concentration, @duchi2024statistics, and @bach2024learning.
 
 ## References
 
