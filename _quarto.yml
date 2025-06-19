@@ -14,7 +14,6 @@ website:
   title: ""
   navbar:
     title: ""
-    # logo: img/nshlab.png
     left:
       - href: "/"
         text: Calendar
@@ -37,7 +36,7 @@ website:
   open-graph: true
   reader-mode: false
   page-footer:
-    left: "© 2024--2025 [Nima Hejazi](https://nimahejazi.org)"
+    left: "&copy; 2024--2025 [Nima Hejazi](https://nimahejazi.org)"
     center: "last updated: {{< meta date >}}"
     right: "built with [quarto](https://quarto.org)"
   site-url: "https://lab.nimahejazi.org/labmeeting/"
