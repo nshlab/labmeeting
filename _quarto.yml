@@ -24,7 +24,6 @@ website:
         icon: archive
     right:
       - href: https://github.com/nshlab/labmeeting
-        text: repo
         icon: github
       - href: https://nimahejazi.org
         icon: house
