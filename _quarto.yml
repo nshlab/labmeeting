@@ -15,7 +15,6 @@ website:
   navbar:
     title: ""
     # logo: img/nshlab.png
-    search: true
     left:
       - href: "/"
         text: Calendar
@@ -28,7 +27,6 @@ website:
         text: repo
         icon: github
       - href: https://nimahejazi.org
-        text: NSH Lab
         icon: house
   sidebar:
     - id: archive
@@ -36,24 +34,35 @@ website:
       title: "Archive"
       contents:
         - auto: archive
-  site-url: https://lab.nimahejazi.org/labmeeting/
-  repo-url: https://github.com/nshlab/labmeeting/
+  search: true
+  open-graph: true
+  reader-mode: false
+  page-footer:
+    left: "© 2024--2025 [Nima Hejazi](https://nimahejazi.org)"
+    center: "last updated: {{< meta date >}}"
+    right: "built with [quarto](https://quarto.org)"
+  site-url: "https://lab.nimahejazi.org/labmeeting/"
+  repo-url: "https://github.com/nshlab/labmeeting/"
   repo-branch: main
   repo-actions: [edit, issue]
-  google-analytics: "UA-67244126-3"
 
 format:
   html:
+    date: last-modified
+    date-format: "DD MMMM YYYY"
     theme: [simplex, styles.scss]
-    include-in-header:
-      - file: mathjax.html
+    include-in-header: mathjax.html
+    css: hide_date.css
+    smooth-scroll: true
     # ToC options
     toc: false
     toc-depth: 2
     toc-title: Contents
-    # citation/reference location
+    # citations/references
     reference-location: margin
     citation-location: document
+    citations-hover: true
+    footnotes-hover: true
     # figure options
     fig-width: 8
     fig-asp: 0.618
@@ -64,10 +73,6 @@ format:
     code-tools: false
     code-line-numbers: true
     code-block-bg: dark
-    highlight-style: zenburn
-    smooth-scroll: true
-    citations-hover: true
-    footnotes-hover: true
-    # code block options
+    highlight-style: ayu-mirage
 
 bibliography: refs.bib

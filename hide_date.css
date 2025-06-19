@@ -1,0 +1,24 @@
+/* Hide the date from the document header */
+.date,
+.published,
+header .date,
+.quarto-title-meta .date,
+.quarto-title-meta-contents .date {
+  display: none !important;
+}
+
+/* Hide the "Published" label more aggressively */
+.quarto-title-meta dt,
+.quarto-title-meta .description,
+.quarto-title-meta-heading,
+.metadata dt,
+.metadata .published,
+dt:contains("Published"),
+.title-block-header .description {
+  display: none !important;
+}
+
+/* Hide the entire title metadata section if needed */
+.quarto-title-meta {
+  display: none !important;
+}
