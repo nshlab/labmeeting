@@ -40,9 +40,9 @@ website:
     center: "last updated: {{< meta date >}}"
     right: "built with [quarto](https://quarto.org)"
   site-url: "https://lab.nimahejazi.org/labmeeting/"
-  repo-url: "https://github.com/nshlab/labmeeting/"
-  repo-branch: main
-  repo-actions: [edit, issue]
+  # repo-url: "https://github.com/nshlab/labmeeting/"
+  # repo-branch: main
+  # repo-actions: [edit, issue]
 
 format:
   html:
