@@ -6,23 +6,38 @@ title: "Fall 2025"
 
 | Date            | Topic                  | Reading          | Presenter   |
 |-----------------|------------------------|------------------|-------------|
-| 27^th^ August  |  | |  |
-| 10^th^ September  |  |  |  |
-| 24^th^ September     |  |  |  |
-| 8^th^ October    |  |  |  |
-| 22^nd^ October    |  |  |  |
-| 5^th^ November    |  |  |  |
-| 19^th^ November    | |  |  |
-| 3^rd^ December    | |  | |
-| 17^th^ December    | |  | |
+| 8^th^ September  | tail and concentration bounds, uniform LLN | @wainwright2019highdim: Ch. 2, 4 |  |
+| 22^nd^ September     | metric entropy, minimax lower bounds | @wainwright2019highdim: Ch. 5, 15 |  |
+| 6^th^ October    | regularized regression and M-estimation | @wainwright2019highdim: Ch. 7, 9 |  |
+| 20^th^ October    | RKHS, non-parametric least squares | @wainwright2019highdim: Ch. 12, 13 |  |
+| 3^rd^ November    |  |  |  |
+| 17^th^ November    | |  |  |
+| 1^st^ December    | |  | |
+| 15^th^ December    | |  | |
 
-: We will meet biweekly **on Wednesdays**, 11:00AM-1:00PM, in HSPH 2-426.
+: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, in HSPH 2-426.
 
+In the upcoming Fall term, we will tentatively discuss various topics in
+high-dimensional statistics, statistical learning theory and machine learning,
+with specific material drawn from and references made to the following texts:
+@wainwright2019highdim, @bickel2015mathematical, @hardt2022patterns,
+@bach2024learning, and @duchi2024statistics. We will attempt to sample some of
+the following:
 
-In the upcoming Fall term, we will tentatively discuss various topics in statistical
-learning theory and statistical machine learning, with specific material drawn
-from and references made to the following texts: @wainwright2019highdim,
-@boucheron2013concentration, @duchi2024statistics, and @bach2024learning.
+* @wainwright2019highdim: Ch. 2 (tail and concentration bounds), 4
+  (uniform laws of large numbers), 5 (metric entropy), 7 (sparse linear
+  models), 9 (regularized M-estimators), 12 (RKHS, including kernel ridge
+  regression), 13 (non-parametric least squares), 15 (minimax lower bounds)
+* @bickel2015mathematical: Ch. 7 (tools for asymptotic analysis), 9 (inference
+  in semi-parametric models), 12 (prediction and machine learning)
+* @hardt2022patterns: Ch. 3 (supervised learning), 5 (optimization), 6
+  (generalization), 7 (deep learning), 11 (sequential decision-making), 12
+  (reinforcement learning)
+* @duchi2024statistics: Ch. 2 (basics of information theory), 4 (concentration
+  inequalities), 5 (generalization and stability), 8 (minimax lower bounds),
+* @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
+  learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
+  (optimization for machine learning), 7 (kernel methods), 8 (sparse methods)
 
 ## References
 
