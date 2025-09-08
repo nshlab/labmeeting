@@ -1,0 +1,234 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{ulln-made-simple}{%
+\section{ULLN Made Simple}\label{ulln-made-simple}}
+
+This writeup contains a narrativized version of my lab meeting talk on
+concentration inequalities from Wainwright (2019) Ch. 4. Enjoy!
+
+\hypertarget{how-complex-of-a-function-can-we-learn}{%
+\subsection{How complex of a function can we
+learn?}\label{how-complex-of-a-function-can-we-learn}}
+
+A \emph{function class} is a set of functions, often denoted
+\(\mathscr{F}\). Some function classes are more or less ``complex'' than
+others. For example, consider the class of univariate linear functions
+versus the class of quadratic functions:
+\[\mathscr{F}_{\text{linear}} = \{f_\beta(x) := \beta_0 + \beta_1 x : \beta_0, \beta_1 \in \mathbb{R}\}\]
+\[\mathscr{F}_{\text{quadratic}} = \{f_\beta(x) := \beta_0 + \beta_1 x + \beta_2 x^2 : \beta_0, \beta_1, \beta_2 \in \mathbb{R}\}\]
+Intuitively, \(\mathscr{F}_{\text{quadratic}}\) is more complex than
+\(\mathcal{F}_{\text{linear}}\) because it contains more free
+parameters.
+
+But why should one care about the complexity of a function class? Well,
+because how complex a function class is determines how well one can
+\emph{estimate} a given function in that class from data by computing a
+mean. Consider collecting a set of random variables
+\(X_1, \ldots, X_n\). You probably remember from an introductory
+statistics or probability course the \emph{law of large numbers}, which
+states that
+\[\frac{1}{n}\sum_{i=1}^n X_i \overset{p}{\rightarrow} E(X_i)\] Indeed,
+we can even bound the error of this estimate for finite \(n\) by using
+\href{Concentration\%20Inequalities\%20Made\%20Simple\%20}{concentration inequalities}.
+But what if we want to estimate a \emph{function} instead of a mean?
+That is, what if we consider \[\frac{1}{n}\sum_{i=1}^n f(X_i)\] for any
+\(f \in \mathscr{F}\)? In this case, it is not possible to bound the
+error or speak of convergence for \emph{any} arbitrary function in an
+arbitrarily large \(\mathscr{F}\). But, if \(\mathscr{F}\) is restricted
+to be particularly ``simple'', then one can bound the estimation error.
+To do this, we consider the quantity
+\[\lVert P_n - P \rVert_{\mathscr{F}} = \sup_{f \in \mathscr{F}} \Big | \frac{1}{n} \sum_{i=1}^nf(X_i) - E(f(X))\Big|\]
+which is the error of the ``empirical'' estimate for the
+\emph{worst-behaving} function in the set \(\mathscr{F}\). If
+\[\lVert P_n - P \rVert_{\mathscr{F}} \overset{p}{\rightarrow} 0\] then
+we call \(\mathscr{F}\) a ``Glivenko-Cantelli'' (or GC) class. Hence, a
+GC class is ``simple enough'' to admit a law of large numbers over all
+possible functions in the class simultaneously. This name comes from
+Glivenko and Cantelli, who proved this property for the set of indicator
+functions \[\{f_t(x) := I(x < t) : t \in \mathbb{R}\}\] thereby showing
+that the empirical cumulative density function (CDF)
+\(\frac{1}{n}\sum_{i=1}^n I(X_i < t)\) is consistent for the true CDF
+\(P(X_i < t)\).
+
+\hypertarget{how-to-measure-complexity}{%
+\subsection{How to measure
+complexity?}\label{how-to-measure-complexity}}
+
+One of the simplest ways to measure ``complexity'' for an arbitrary
+function class \(\mathscr{F}\) is by using \textbf{Rademacher
+complexity}. Let \(\varepsilon_1, \ldots \varepsilon_n\) be set of
+random Rademacher variables taking the values \(\{-1, 1\}\) with equal
+probability. Then, the Rademacher complexity for a sample of random
+variables is defined
+\[R(\mathscr{F}) := E_{X, \varepsilon}\Big(\sup_{f \in \mathscr{F}} \Big| \frac{1}{n}\sum_{i=1}^n \varepsilon_i f(X_i)\Big|\Big)\]
+Intuitively, for a finite collection of random variables
+\(X_1,\ldots, X_n\), the Rademacher complexity poses the question ``how
+correlated can \(f(X_i)\) be with a vector of random noise?'' If some
+function in \(\mathscr{F}\) can always close to perfectly fit some
+noise, then estimation becomes impossible -- but if its complexity
+decreases with \(n\), then eventually no function can be correlated with
+noise, and estimation becomes possible.
+
+What's nice about Rademacher complexity is that it can bound the
+worst-case error. If \(\lVert f \rVert_\infty \leq b\) for all
+\(f \in \mathscr{F}\), then
+\[\lVert P_n - P \rVert_{\mathscr{F}} \leq 2R(\mathscr{F}) + \delta\]
+with probability at least \(1 - \exp(- \frac{n \delta^2}{2b^2})\).
+
+This upper bound, controlled by \(\delta\), decays in \(n\); therefore,
+if \(R(\mathscr{F}) = o(1)\) then
+\(\lVert P_n - P \rVert_{\mathscr{F}} \overset{p}{\rightarrow} 0\),
+making \(\mathscr{F}\) a Glivenko-Cantelli class. Proof of this follows
+from the bounded differences inequality (Wainwright 2019, Corollary
+2.21) and symmetrization.
+
+Furthermore, one can also show analogous \emph{lower bound}, meaning
+that a function class is only Glivenko-Cantelli if its Rademacher
+complexity is finite (Wainwright 2019, Prop 4.12). This means that
+Rademacher complexity provides a robust way to study the uniform law of
+large numbers.
+
+\hypertarget{measuring-rademacher-complexity}{%
+\subsection{Measuring Rademacher
+Complexity}\label{measuring-rademacher-complexity}}
+
+How do we know whether the Rademacher complexity of a function class is
+small, and therefore sufficient for the purposes of establishing a
+Glivenko-Cantelli class? Here, we will review a few elementary
+techniques.
+
+\textbf{Polynomial discrimination}. An easy way to bound the Rademacher
+complexity of \(\mathscr{F}\) is to literally examine the cardinality of
+\[\mathscr{F}(x_1^n) = \Big\{[f(x_1), \ldots, f(x_n)] \mid f \in \mathscr{F}\Big\}\]
+the number of unique function evaluations over a set.
+
+For example, given a set of data \(X_1, \ldots, X_n\), one often
+considers a function to be composed of a series of decision rules that
+``split'' the dataset at a given \(X_i\). For example, decision trees
+are composed of such a structure. In this setting, there are \(n\)
+possible splits, and a finite \(2^n\) possible combinations of splits,
+meaning \(\mathscr{F}\) contains only \(2^n\) possible functions.
+\(2^n\) is still too complex of a function class to bound the Rademacher
+complexity. But, if an \(f \in \mathscr{F}\) only can be composed of a
+small subset of splits, then a nice bound can be established.
+
+\(\mathscr{F}\) is of \emph{polynomial discrimination} \(\nu\)
+if\[\text{cardinality}(\mathscr{F}(x_1^n)) \leq (n + 1)^\nu\]that is,
+the size of \(\mathscr{F}\) is only a \emph{polynomial} function of
+\(n\), rather than an \emph{exponential} function. In this case, the
+Rademacher complexity is bounded, still assuming
+\(\lVert f \rVert_\infty < b\), as
+\[R(\mathscr{F}) \leq 2b\sqrt{\frac{\nu \log(n + 1)}{n}}\] For example,
+this technique can be used to establish a bound for the ``classical''
+Glivenko-Cantelli theorem with indicator functions (\(b = 1\),
+\(\nu = 1\)) mentioned earlier.
+
+\textbf{Vapnik-Chernovenkis (VC) Classes}. Establishing a bound on the
+cardinality of \(\mathscr{F}\) can be challenging. If \(f\) is
+binary-valued (i.e.~an indicator function), one can consider the
+sometimes easier task of establishing a \emph{VC class}.
+
+A class \(\mathscr{F}\) is said to ``shatter'' a collection of points
+\(x_1, \ldots, x_m\) if
+\(\text{cardinality}(\mathscr{F}(x_1^m)) = 2^m\). In layman's terms,
+this means \emph{if each \(x_i\) were assigned a \(\{0, 1\}\) label,
+there would exist some \(f \in \mathscr{F}\) that perfectly separates
+the points labeled 0 from the points labeled 1.}
+
+The \emph{VC dimension} \(\nu(\mathscr{F})\) of a function class is the
+largest \(m\) for which there exists \textbf{some} set of points
+\(x_1, \ldots, x_m\) that is ``shattered'' by \(\mathcal{F}\). A VC
+class has finite VC dimension: given a large enough collection of
+points, our function class cannot possibly discriminate between them
+all.
+
+A landmark result in complexity theory shows that any VC class is also
+of polynomial discrimination. That is, if \(\mathscr{F}\) is a VC class
+with dimension \(\nu(\mathcal{F})\), then
+\(\text{cardinality}(\mathscr{F}(x_1^n)) \leq (n + 1)^{\nu(\mathcal{F})}\),
+and all of the above bounds apply. One can control the VC dimension
+using various techniques.
+
+\hypertarget{controlling-vc-dimension}{%
+\subsection{Controlling VC Dimension}\label{controlling-vc-dimension}}
+
+Finite VC dimension permits control over simple function classes. One
+nice property of VC dimension is that it is preserved under various set
+operations. If \(\mathscr{F}_1\) and \(\mathscr{F}_2\) have finite VC
+dimension, then so do \(\mathscr{F}_1^c\),
+\(\mathscr{F}_1 \cup \mathscr{F}_2\), and
+\(\mathscr{F}_1 \cap \mathscr{F}_2\).
+
+A slightly more complicated example concerns \emph{subgraphs}:
+classifiers that select \(x\) contained within some boundary defined by
+a set of functions \(\mathscr{G}\). Consider \(\mathscr{F}\) is defined
+such that \(f(x) = I(x \in S(\mathscr{G}))\) where
+\[S(\mathscr{G}) = \Big\{\{x: g(x) \leq 0\} : g \in \mathcal{G}\Big\}\]
+denotes the class of ``subgraphs'' of each \(g \in \mathscr{G}\). If
+\(\mathscr{G}\) is a vector space with dimension
+\(\text{dim}(\mathcal{F})\) consisting of real-valued functions, then
+the VC dimension of \(\mathscr{F}\) must be bounded by
+\(\text{dim}(\mathcal{F})\).
+
+The above notion allows us to bound the VC dimension of linear
+functions, bringing us full circle in explaining why the set of linear
+functions is ``simple'' enough to estimate statistically. In addition,
+this subgraph notion can also bound the VC dimension of shapes like
+spheres, ellipsoids, etc.
+
+\end{document}

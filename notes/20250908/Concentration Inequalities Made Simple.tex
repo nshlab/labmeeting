@@ -1,0 +1,271 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{concentration-inequalities-made-simple}{%
+\section{Concentration Inequalities Made
+Simple}\label{concentration-inequalities-made-simple}}
+
+This writeup contains a narrativized version of my lab meeting talk on
+concentration inequalities from Wainwright (2019) Ch. 2. Enjoy! \#\#
+What is ``concentration'' in statistics?
+
+When constructing an estimator, a common goal is to guarantee that its
+estimates fall within a certain region with high probability. In other
+words, one is often interested in ensuring that extremely inaccurate
+results are very unlikely. Formally, we say that the probability of a
+random object \emph{concentrates} if we can bound it into a certain
+region. This gives rise to the notion of concentration bounds.
+
+Concentration bounds are also sometimes called ``tail bounds'' because
+they usually involve bounding how much probably lies in the ``tails''
+(extreme values) of an estimator's distribution; that is,
+\(P(X \geq t)\) is small, where \(t\) defines the ``tail'' of the
+distribution.
+
+Consider \textbf{Markov's inequality}, which states that for a
+nonnegative random variable \(X\), \[P(X > t) \leq \frac{E(X)}{t}\]
+Markov's inequality tells us that the probability of observing an
+extreme observation -- with ``extreme'' defined as some arbitrary amount
+\(a\) -- can be bounded by its expected value. The nice part of this
+bound is that it is completely nonparametric: it holds for \emph{any}
+random variable whose expected value is defined.
+
+This inequality forms the basis of most concentration bounds. Since
+\(X\) is arbitrary, we can plug in more specific random quantities to
+derive tight bounds on various estimators. For example, Chebyshev's
+inequality is a natural extension, measuring the absolute error of \(X\)
+as an estimator of its mean:
+\[P\Big(|X - \mu| > t\Big) \leq \frac{\sqrt{\text{Var}(X)}}{t^2}\]
+Andrey Markov was the student of Pafutny Chebshev, so it's natural that
+the two forsaw the potential of such concentration bounds. When \(X\) is
+an estimator, such as the empirical mean, \(n^{-1} \sum_{i=1}^n X_i\),
+its variance will depend inversely on \(n\), supporting the proof of
+asymptotic results like the Law of Large Numbers. Hence, despite being
+fundamentally nonasymptotic in nature, concentration bounds like
+Markov's inequality form the foundation of asymptotic statistics.
+
+\emph{One final note}: ``Concentration of measure'' refers to the fact
+that many of the same bounds hold for arbitrary measures, not just
+probability measures. But in statistics, this term is the same as
+``concentration of probability''.
+
+\hypertarget{achieving-tighter-bounds}{%
+\subsection{Achieving Tighter Bounds}\label{achieving-tighter-bounds}}
+
+Despite being relative ``loose'' for certain random variables, Markov's
+inequality is actually unimprovable in general. But, by imposing just
+\emph{slightly} stronger assumptions, one can obtain stronger tail
+bounds.
+
+Consider an \(X\) whose centered moment-generating function (MGF)
+\(E(e^{\lambda (X - \mu)})\) exists for \(\lambda \leq |b|\). Then, one
+can apply Markov's inequality to see that
+\[P\Big(X - \mu > t\Big) = P\Big(e^{\lambda(X - \mu)} > e^{\lambda t}\Big) \leq \frac{E(e^{\lambda(X - \mu)})}{e^{\lambda t}}\]
+The \textbf{Chernoff bound} uses this application of Markov's
+inequality, takes the log to make it easier to work with, and optimizes
+over \(\lambda\):
+\[\log P\Big(X - \mu > t\Big) \leq \inf_{\lambda \in [0, b]} \log E(e^{\lambda(X - \mu)}) - \lambda t\]
+Ok, so why is this important? Well, if we know something about the MGF
+of \(X\), we can specialize the Chernoff bound in order to impose
+\emph{much tighter} bounds on \(X\) that do not necessarily rely on
+infinitely large \(n\) like asymptotic results often do. Let's see two
+examples.
+
+\hypertarget{sub-gaussian-random-variables}{%
+\subsection{Sub-Gaussian Random
+Variables}\label{sub-gaussian-random-variables}}
+
+A random variable is said to be \textbf{sub-Gaussian} if its centered
+MGF is bounded exponentially in \(\lambda\):
+\[E(e^{\lambda(X - \mu)}) \leq e^{\sigma^2 \lambda^2 / 2}\] The name
+``sub-Gaussian'' comes from the fact that if \(X\sim N(\mu, \sigma^2)\),
+this equality holds exactly, yielding the Chernoff bound
+\[\log P\Big(X - \mu > t\Big) \leq \inf_{\lambda \geq 0} \Big(\frac{\lambda^2\sigma^2}{2} - \lambda t\Big) = -\frac{t^2}{2\sigma^2}\]
+Now we can see why we took the log: the expression to minimize becomes a
+quadratic, which is easily calculated using the first-derivative test.
+But even if \(X\) is not Gaussian, as long as its MGF is \emph{bounded}
+by a Gaussian MGF, the right side will be bounded instead of exactly
+equal, and we can exponentiate both sides to obtain the concentration
+inequality \[P\Big(X - \mu > t\Big) \leq \exp(-\frac{t^2}{2\sigma^2})\]
+Clearly this bound is in general much tighter. The plot below compares
+the sub-Gaussian Chernoff bound above (in blue) with that of Markov's
+inequality (in red) for \(\sigma^2 = 1\).
+
+{[}{[}Pasted image 20250828115933.png{]}{]} Figure 1: Decay of
+probability concentration at various upper region cut-points \(t\) for
+different concentration inequalities.
+
+Like Gaussianity, sub-Gaussianity is preserved under linear
+transformation: if \(X_1\) and \(X_2\) are sub-Gaussian, then so is
+\(X_1 + X_2\), with parameter \(\sigma^2 = \sigma_1^2 + \sigma_2^2\).
+From this, if \(X_1, \ldots, X_n\) are sub-Gaussian, then the
+\textbf{Hoeffding bound} follows:
+\[P\Big(\sum_{i=1}^n (X_i - \mu_i) \geq t\Big) \leq \exp\Big(-\frac{t^2}{2\sum_{i=1}^n \sigma_i^2}\Big)\]
+Many types of random variables are sub-Gaussian. For example, one can
+show any bounded random variable is sub-Gaussian. Also, there are
+several equivalence characterizations, given by Wainwright (2019)
+Theorem 2.6. But not all are, so let's also look at a closely related
+class of random variables whose probability concentrates.
+
+\hypertarget{sub-exponential-random-variables}{%
+\subsection{Sub-exponential Random
+Variables}\label{sub-exponential-random-variables}}
+
+A random variable is said to be \textbf{sub-exponential} if there exist
+nonnegative parameters \(\nu, \alpha\) such that
+\[E(e^{\lambda(X - \mu)}) \leq e^{\nu^2 \lambda^2 / 2}\] for all
+\(|\lambda | < 1/\alpha\). This bound is almost identical to that of a
+sub-Gaussian (with \(\nu\) replacing \(\sigma\)); the only difference
+being that it only holds for the subset of \(|\lambda| < 1/\alpha\)
+instead of all \(\lambda\). Hence, all sub-Gaussian random variables are
+sub-exponential, but the converse is not necessarily true -- for
+instance, \(\chi^2\) random variables are subexponential but not
+sub-Gaussian.
+
+This condition is equivalent to stating that the MGF exists only in a
+neighborhood of 0. The corresponding tail bound arising from this
+condition is that
+
+\[P\Big(X - \mu \geq t\Big) \leq \begin{cases}e^\frac{-t^2}{2\nu^2} & 0 \leq t \leq \nu^2/\alpha \\ e^{-\frac{t}{2\alpha}} & t > \frac{\nu^2}{\alpha}\end{cases}\]
+
+Effectively, this means we loosen the bound for large \(t\): - If the
+tail region \(t\) is small, then \(X\) concentrates like a normal random
+variable with variance \(\nu^2\). - If the tail region \(t\) is large,
+then \(X\) concentrates like an exponential random variable with mean
+parameter \(\alpha\).
+
+Why is this important? We can sacrifice a slightly slower rate of
+convergence on the tails (in terms of the upper region boundary \(t\)),
+and in exchange, the MGF only needs exist in a \emph{neighborhood} of
+\(\lambda = 0\). The large the \(\alpha\), the farther we descend at a
+sub-Gaussian rate before switching to the slower sub-exponential rate.
+The plot below visualizes this change. {[}{[}Pasted image
+20250828142617.png{]}{]} Figure 2: Decay of probability concentration at
+various upper region cut-points \(t\) for sub-Gaussian vs
+sub-exponential random variables.
+
+We can verify whether a random variable is sub-exponential by checking
+\textbf{Bernstein's condition}:
+\[\Big|E\Big((X - \mu)^k\Big)\Big| \leq \frac{1}{2}k! \sigma^2 b^{k-2}\]
+If this condition holds, then \(X\) is sub-exponential with parameters
+\(\sigma^2\) and \(b\), and the \textbf{Bernstein concentration
+inequality} holds:
+\[P(|X - \mu| \geq t) \leq 2e^{-\frac{t^2}{2(\sigma^2 + bt)}}\] Again,
+this condition automatically holds for bounded random variables, and one
+can derive one-sided versions of this result too (see Wainwright (2019)
+Proposition 2.14), along with equivalent characterizations of
+sub-exponential random variables.
+
+\hypertarget{an-application-of-concentration}{%
+\subsection{An application of
+concentration}\label{an-application-of-concentration}}
+
+\textbf{Data Compression}: If we have a dataset with many variables
+\(d\), performing various operations on it may be expensive. To solve
+this problem, we can consider reducing the dimension using a
+\emph{random projection} that preserves pairwise distances between
+points approximately. The \textbf{Johnson-Lindenstrauss Lemma} states
+that with high probability, a dimension-reducing projection \(F\) will
+satisfy, for all \(i, j\),
+\[(1 - \delta) \leq \frac{\lVert F(u^i) - F(u^j) \rVert_2^2}{\lVert u^i - u^j \rVert_2^2} \leq (1 + \delta)\]
+provided the projected dimension \(m \succsim \delta^{-2} \log n\). We
+can prove this by noting that if we take \(X\) such that each entry is
+\(N(0,1)\), then
+\[\frac{\lVert Xu \rVert_2^2}{\lVert u \rVert_2^2} = \sum_{i=1}^m \langle x_i, u/\lVert u\rVert_2\rangle^2\]
+is a \(\chi^2(m)\) random variable. Applying the sub-exponential tail
+bound,
+\[P\Big(\Big|\frac{\lVert Xu \rVert_2^2}{\lVert u \rVert_2^2} - 1\Big| \geq \delta\Big) \leq 2e^{-m\delta^2 / 8}\]
+and since there are \(N \choose 2\) pairs of data \(u^i - u^j\) ,
+letting \(F(u) = Xu\), by the union bound we have
+
+\[P\Big(\frac{\lVert F(u^i) - F(u^j) \rVert_2^2}{\lVert u^i - u^j \rVert_2^2} -1 \in [-\delta, \delta]\Big) \leq 2 {N\choose 2} e^{-m\delta^2 / 8}\]
+And this probability can be driven below \(\varepsilon\) by choosing
+\(m > \frac{16}{\delta^2} \log (n / \varepsilon)\)
+
+\hypertarget{functions-of-bounded-differences}{%
+\subsection{Functions of Bounded
+Differences}\label{functions-of-bounded-differences}}
+
+As one might expect, the concentration inequalities discussed above can
+be used similar properties for martingale differences as well. For
+instance, let \(D_k\) denote a martingale difference sequence such that
+\(D_k \in [a_k, b_k]\) almost surely. The \textbf{Azuma-Hoeffding
+inequality} states
+\[P\Big( \Big | \sum_{k=1}^n D_k \Big| \geq t \Big) \leq 2e^{-\frac{2t^2}{\sum_{k=1}^n (b_k - a_k)^2}}\]
+Consider two vectors \(x\) and \(x^k\) that are identical except on
+index \(k\). \(f : \mathbb{R}^n \rightarrow \mathbb{R}\) satisfies the
+\textbf{bounded difference} property with parameters
+\((L_1, \ldots, L_n))\) if, for all \(x, x^k \in \mathbb{R}^n\),
+\[| f(x) - f(x^k) | \leq L_k\] Then, it follows from the Azuma-Hoeffding
+inequality that
+\[P\Big( \Big | f(X) - E(f(X)) \Big| \geq t \Big) \leq 2e^{-\frac{2t^2}{\sum_{k=1}^n L_k^2}}\]
+This can be used to prove concentration inequalities for summaries of
+weakly-correlated random variables. For example, if
+\(U = \frac{1}{n \choose 2} \sum_{j < k} g(X_j, X_k)\), a first-order
+U-statistic, where \(g\) is bounded such that
+\(\lVert g \rVert_\infty < b\), then
+\[P\Big(|U - E(U)| \geq t\Big) \leq 2e^\frac{-nt^2}{8b^2}\] But we can
+go even further! If \(f\) is L-Lipschitz, meaning that
+\[|f(x) - f(y) | \leq L \lVert x - y \rVert_2\] and \(X_1, \ldots, X_n\)
+are IID standard Gaussian, then a very similar concentration result
+holds:
+\[P\Big( \Big | f(X) - E(f(X)) \Big| \geq t \Big) \leq 2e^{-\frac{t^2}{2L^2}}\]
+This can be used to prove a variety of results, including that the
+difference between order statistics of Gaussian random vectors satisfies
+\(P(|X_{(k)} - E(X_{(k)})| \geq t) \leq 2e^{-\frac{t^2}{2}}\)
+
+\end{document}
