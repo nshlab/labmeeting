@@ -9,10 +9,10 @@ title: "Fall 2025"
 | 8^th^ September  | tail and concentration bounds, uniform laws of large numbers | @wainwright2019highdim: Ch. 2, 4 | SB |
 | 22^nd^ September     | metric entropy, minimax lower bounds | @wainwright2019highdim: Ch. 5, 15 | HL |
 | 6^th^ October    | regularized regression and M-estimation | @wainwright2019highdim: Ch. 7, 9 | CT |
-| 20^th^ October    | RKHS, non-parametric least squares | @wainwright2019highdim: Ch. 12, 13 |  |
+| 20^th^ October    | RKHS, non-parametric least squares | @wainwright2019highdim: Ch. 12, 13 | CJ |
 | 3^rd^ November    |  |  |  |
 | 17^th^ November    | |  |  |
-| 1^st^ December    | |  | |
+| 1^st^ December (FXB G03)    | |  | |
 | 15^th^ December    | |  | |
 
 : We will meet biweekly **on Mondays**, 10:00AM-12:00PM, in HSPH 2-426.
