@@ -1,0 +1,47 @@
+---
+title: "Spring 2026"
+---
+
+## Meeting Schedule
+
+| Date            | Topic | Reading                       | Presenter |
+| --------------- | ----- | ----------------------------- | --------- |
+| 26^th^ January  |       | @bach2024learning: Ch. 1, 2   |           |
+| 2^nd^ February  |       | research connection talk      |           |
+| 9^th^ February  |       | @bach2024learning: Ch. 3, 4   |           |
+| 16^th^ February |       | research connection talk      |           |
+| 23^rd^ February |       | @bach2024learning: Ch. 5, 6   |           |
+| 2^nd^ March     |       | research connection talk      |           |
+| 9^th^ March     |       | @bach2024learning: Ch. 7, 8   |           |
+| 16^th^ March    |       | research connection talk      |           |
+| 23^rd^ March    |       | @bach2024learning: Ch. 9, 10  |           |
+| 30^th^ March    |       | research connection talk      |           |
+| 6^th^ April     |       | @bach2024learning: Ch. 11, 12 |           |
+| 13^th^ April    |       | research connection talk      |           |
+| 20^th^ April    |       |                               |           |
+| 27^th^ April    |       |                               |           |
+| 4^th^ May       |       |                               |           |
+| 11^th^ May      |       |                               |           |
+
+: We will meet _weekly_ **on Mondays**, 11:00AM-01:00PM, in HSPH 2-426.
+
+In the upcoming Spring term, we will continue to discuss topics in statistical
+learning theory and machine learning and high-dimensional statistics, with
+specific material drawn from and references made to the following texts:
+@bickel2015mathematical @bach2024learning, and @duchi2024statistics. We will
+attempt to sample some of the following:
+
+- @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
+  learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
+  (optimization for machine learning), 6 (local averaging methods), 7 (kernel
+  methods), 8 (sparse methods), 9 (neural networks), 10 (ensemble learning),
+  11 (from online learning to bandits), 12 (overparametrized models)
+- @bickel2015mathematical: Ch. 7 (tools for asymptotic analysis), 9 (inference
+  in semi-parametric models), 12 (prediction and machine learning)
+- @duchi2024statistics: Ch. 2 (basics of information theory), 4 (concentration
+  inequalities), 5 (generalization and stability), 8 (minimax lower bounds),
+
+## References
+
+::: {#refs}
+:::

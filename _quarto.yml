@@ -3,13 +3,12 @@ project:
   render:
     - "*.qmd"
     - "!notes/"
-
+    - "!sandbox/"
 execute:
   freeze: auto
   #echo: false
   warning: false
   message: false
-
 website:
   title: ""
   navbar:
@@ -43,7 +42,6 @@ website:
   # repo-url: "https://github.com/nshlab/labmeeting/"
   # repo-branch: main
   # repo-actions: [edit, issue]
-
 format:
   html:
     date: last-modified
@@ -72,5 +70,4 @@ format:
     code-line-numbers: true
     code-block-bg: dark
     highlight-style: ayu-mirage
-
 bibliography: refs.bib
