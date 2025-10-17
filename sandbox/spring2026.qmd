@@ -25,11 +25,10 @@ title: "Spring 2026"
 
 : We will meet _weekly_ **on Mondays**, 11:00AM-01:00PM, in HSPH 2-426.
 
-In the upcoming Spring term, we will continue to discuss topics in statistical
-learning theory and machine learning and high-dimensional statistics, with
-specific material drawn from and references made to the following texts:
-@bickel2015mathematical @bach2024learning, and @duchi2024statistics. We will
-attempt to sample some of the following:
+In the Spring 2026 term, we will continue to discuss topics in statistical
+learning theory and statistical machine learning, with material to be drawn
+from the texts @bach2024learning, @bickel2015mathematical, and
+@duchi2024statistics (see details below).
 
 - @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
   learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
