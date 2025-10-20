@@ -10,9 +10,9 @@ title: "Fall 2025"
 | 22^nd^ September | metric entropy, minimax lower bounds                         | @wainwright2019highdim: Ch. 5, 15  | HL        |
 | 6^th^ October    | regularized regression and M-estimation                      | @wainwright2019highdim: Ch. 7, 9   | CT        |
 | 20^th^ October   | RKHS, non-parametric least squares                           | @wainwright2019highdim: Ch. 12, 13 | CJ        |
-| 3^rd^ November   |                                                              |                                    |           |
-| 17^th^ November  |                                                              |                                    |           |
-| 8^th^ December   |                                                              |                                    |           |
+| 3^rd^ November   |                                                              | @hardt2022patterns Ch. 3, 4, 5     | NH        |
+| 17^th^ November  |                                                              | @hardt2022patterns Ch. 6, 7        | CT        |
+| 8^th^ December   |                                                              | @hardt2022patterns Ch. 11, 12      | SB        |
 
 : We will meet biweekly **on Mondays**, 10:00AM-12:00PM, in HSPH 2-426.
 
