@@ -4,15 +4,15 @@ title: "Fall 2025"
 
 ## Meeting Schedule
 
-| Date             | Room    | Topic                                                           | Reading                            | Presenter |
-| ---------------- | ------- | --------------------------------------------------------------- | ---------------------------------- | --------- |
-| 8^th^ September  | 2-426   | tail and concentration bounds, uniform laws of large numbers    | @wainwright2019highdim: Ch. 2, 4   | SB        |
-| 22^nd^ September | 2-426   | metric entropy, minimax lower bounds                            | @wainwright2019highdim: Ch. 5, 15  | HL        |
-| 6^th^ October    | 2-426   | regularized regression and M-estimation                         | @wainwright2019highdim: Ch. 7, 9   | CT        |
-| 20^th^ October   | 2-426   | RKHS, non-parametric least squares                              | @wainwright2019highdim: Ch. 12, 13 | CJ        |
-| 3^rd^ November   | 2-426   | supervised learning, representations and features, optimization | @hardt2022patterns Ch. 3, 4, 5     | NSH       |
-| 17^th^ November  | 2-426   | generalization, deep learning                                   | @hardt2022patterns Ch. 6, 7        | CT        |
-| 8^th^ December   | FXB-G03 | sequential decision-making, reinforcement learning              | @hardt2022patterns Ch. 11, 12      | SB        |
+| Date        | Room    | Topic                                                           | Reading                            | Presenter |
+| ----------- | ------- | --------------------------------------------------------------- | ---------------------------------- | --------- |
+| 8^th^ Sep.  | 2-426   | tail and concentration bounds, uniform laws of large numbers    | @wainwright2019highdim: Ch. 2, 4   | SB        |
+| 22^nd^ Sep. | 2-426   | metric entropy, minimax lower bounds                            | @wainwright2019highdim: Ch. 5, 15  | HL        |
+| 6^th^ Oct.  | 2-426   | regularized regression and M-estimation                         | @wainwright2019highdim: Ch. 7, 9   | CT        |
+| 20^th^ Oct. | 2-426   | RKHS, non-parametric least squares                              | @wainwright2019highdim: Ch. 12, 13 | CJ        |
+| 3^rd^ Nov.  | 2-426   | supervised learning, representations and features, optimization | @hardt2022patterns Ch. 3, 4, 5     | NSH       |
+| 17^th^ Nov. | 2-426   | generalization, deep learning                                   | @hardt2022patterns Ch. 6, 7        | CT        |
+| 8^th^ Dec.  | FXB-G03 | sequential decision-making, reinforcement learning              | @hardt2022patterns Ch. 11, 12      | SB        |
 
 : We will meet biweekly **on Mondays**, 10:00AM-12:00PM, usually in HSPH 2-426.
 
