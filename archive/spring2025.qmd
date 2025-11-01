@@ -1,5 +1,7 @@
 ---
 title: "Spring 2025"
+section-divs: false
+sidebar: false
 ---
 
 ## Meeting Schedule

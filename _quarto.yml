@@ -18,7 +18,6 @@ website:
         text: Calendar
         icon: calendar-check
       - href: sidebar:archive
-        # text: Archive
         icon: archive
     right:
       - href: https://github.com/nshlab/labmeeting
@@ -27,7 +26,6 @@ website:
         icon: house
   sidebar:
     - id: archive
-      # icon: archive
       title: "Archive"
       contents:
         - auto: archive

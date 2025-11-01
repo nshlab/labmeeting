@@ -1,5 +1,7 @@
 ---
 title: "Fall 2025"
+section-divs: false
+sidebar: false
 ---
 
 ## Meeting Schedule
@@ -14,7 +16,7 @@ title: "Fall 2025"
 | 17^th^ Nov. | 2-426   | generalization, deep learning                                   | @hardt2022patterns Ch. 6, 7        | CT        |
 | 8^th^ Dec.  | FXB-G03 | sequential decision-making, reinforcement learning              | @hardt2022patterns Ch. 11, 12      | SB        |
 
-: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, usually in HSPH 2-426.
+: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, *usually* in HSPH 2-426.
 
 In the Fall 2025 term, we will discuss topics in high-dimensional statistics
 and statistical machine learning, with material drawn from the texts
