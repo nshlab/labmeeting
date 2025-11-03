@@ -12,9 +12,9 @@ sidebar: false
 | 22^nd^ Sep. | 2-426   | metric entropy, minimax lower bounds                            | @wainwright2019highdim: Ch. 5, 15  | HL        |
 | 6^th^ Oct.  | 2-426   | regularized regression and M-estimation                         | @wainwright2019highdim: Ch. 7, 9   | CT        |
 | 20^th^ Oct. | 2-426   | RKHS, non-parametric least squares                              | @wainwright2019highdim: Ch. 12, 13 | CJ        |
-| 3^rd^ Nov.  | 2-426   | supervised learning, representations and features, optimization | @hardt2022patterns Ch. 3, 4, 5     | NSH       |
-| 17^th^ Nov. | 2-426   | generalization, deep learning                                   | @hardt2022patterns Ch. 6, 7        | CT        |
-| 8^th^ Dec.  | FXB-G03 | sequential decision-making, reinforcement learning              | @hardt2022patterns Ch. 11, 12      | SB        |
+| 3^rd^ Nov.  | 2-426   | supervised learning, representations and features, optimization | @wainwright2019highdim: 13, @hardt2022patterns Ch. 3     | CJ, NSH   |
+| 17^th^ Nov. | 2-426   | generalization, deep learning                                   | @hardt2022patterns Ch. 4, 5        | SB        |
+| 8^th^ Dec.  | FXB-G03 | sequential decision-making, reinforcement learning              | @hardt2022patterns Ch. 6, 7      | CT        |
 
 : We will meet biweekly **on Mondays**, 10:00AM-12:00PM, *usually* in HSPH 2-426.
 
