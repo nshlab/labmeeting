@@ -9,23 +9,23 @@ sidebar: false
 | Date        | Room  | Topic | Reading                       | Presenter |
 | ----------- | ----- | ----- | ----------------------------- | --------- |
 | 26^th^ Jan. | 2-426 |       | @bach2024learning: Ch. 1, 2   |           |
-| 2^nd^ Feb.  | 2-426 |       | research connection talk      |           |
+| 2^nd^ Feb.  | 2-426 |       | connections with research      |           |
 | 9^th^ Feb.  | 2-426 |       | @bach2024learning: Ch. 3, 4   |           |
-| 16^th^ Feb. | 2-426 |       | research connection talk      |           |
+| 16^th^ Feb. | 2-426 |       | connections with research      |           |
 | 23^rd^ Feb. | 2-426 |       | @bach2024learning: Ch. 5, 6   |           |
-| 2^nd^ Mar.  | 2-426 |       | research connection talk      |           |
+| 2^nd^ Mar.  | 2-426 |       | connections with research      |           |
 | 9^th^ Mar.  | 2-426 |       | @bach2024learning: Ch. 7, 8   |           |
-| 16^th^ Mar. | 2-426 |       | research connection talk      |           |
+| 16^th^ Mar. | 2-426 |       | connections with research      |           |
 | 23^rd^ Mar. | 2-426 |       | @bach2024learning: Ch. 9, 10  |           |
-| 30^th^ Mar. | 2-426 |       | research connection talk      |           |
+| 30^th^ Mar. | 2-426 |       | connections with research      |           |
 | 6^th^ Apr.  | 2-426 |       | @bach2024learning: Ch. 11, 12 |           |
-| 13^th^ Apr. | 2-426 |       | research connection talk      |           |
-| 20^th^ Apr. | 2-426 |       |                               |           |
-| 27^th^ Apr. | 2-426 |       |                               |           |
-| 4^th^ May   | 2-426 |       |                               |           |
-| 11^th^ May  | 2-426 |       |                               |           |
+| 13^th^ Apr. | 2-426 |       | connections with research      |           |
+| 20^th^ Apr. | 2-426 |       | tbd                              |           |
+| 27^th^ Apr. | 2-426 |       | connections with research                              |           |
+| 4^th^ May   | 2-426 |       | tbd                              |           |
+| 11^th^ May  | 2-426 |       | connections with research                              |           |
 
-: We will meet _weekly_ **on Mondays**, 11:00AM-01:00PM, usually in HSPH 2-426.
+: We will meet *weekly* **on Mondays**, 11:00AM-01:00PM, usually in HSPH 2-426.
 
 In the Spring 2026 term, we will continue to discuss topics in statistical
 learning theory and statistical machine learning, with material to be drawn
@@ -36,7 +36,7 @@ from the texts @bach2024learning, @bickel2015mathematical, and
   learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
   (optimization for machine learning), 6 (local averaging methods), 7 (kernel
   methods), 8 (sparse methods), 9 (neural networks), 10 (ensemble learning),
-  11 (from online learning to bandits), 12 (overparametrized models)
+  11 (from online learning to bandits), 12 (over-parametrized models)
 - @bickel2015mathematical: Ch. 7 (tools for asymptotic analysis), 9 (inference
   in semi-parametric models), 12 (prediction and machine learning)
 - @duchi2024statistics: Ch. 2 (basics of information theory), 4 (concentration
