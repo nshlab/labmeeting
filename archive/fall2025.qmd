@@ -1,0 +1,36 @@
+---
+title: "Fall 2025"
+section-divs: false
+sidebar: false
+---
+
+## Meeting Schedule
+
+| Date        | Room    | Topic                                                           | Reading                            | Presenter |
+| ----------- | ------- | --------------------------------------------------------------- | ---------------------------------- | --------- |
+| 8^th^ Sep.  | 2-426   | tail and concentration bounds, uniform laws of large numbers    | @wainwright2019highdim: Ch. 2, 4   | SB        |
+| 22^nd^ Sep. | 2-426   | metric entropy, minimax lower bounds                            | @wainwright2019highdim: Ch. 5, 15  | HL        |
+| 6^th^ Oct.  | 2-426   | regularized regression and M-estimation                         | @wainwright2019highdim: Ch. 7, 9   | CT        |
+| 20^th^ Oct. | 2-426   | RKHS, non-parametric least squares                              | @wainwright2019highdim: Ch. 12, 13 | CJ        |
+| 3^rd^ Nov.  | 2-426   | non-parametric least squares, supervised learning  | @wainwright2019highdim: 13, @hardt2022patterns Ch. 3     | CJ, NSH   |
+| 17^th^ Nov. | 2-426   | representations and features, optimization                                   | @hardt2022patterns Ch. 4, 5        | SB        |
+| 8^th^ Dec.  | FXB-G03 | generalization, deep learning              | @hardt2022patterns Ch. 6, 7      | CT        |
+
+: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, *usually* in HSPH 2-426.
+
+In the Fall 2025 term, we will discuss topics in high-dimensional statistics
+and statistical machine learning, with material drawn from the texts
+@wainwright2019highdim and @hardt2022patterns (see details below). We will
+continue along this theme in the Spring 2026 term.
+
+- @wainwright2019highdim: Ch. 2 (tail and concentration bounds), 4
+  (uniform laws of large numbers), 5 (metric entropy), 7 (sparse linear
+  models), 9 (regularized M-estimators), 12 (RKHS, including kernel ridge
+  regression), 13 (non-parametric least squares), 15 (minimax lower bounds)
+- @hardt2022patterns: Ch. 3 (supervised learning), 4 (representation and
+  features), 5 (optimization), 6 (generalization), 7 (deep learning)
+
+## References
+
+::: {#refs}
+:::

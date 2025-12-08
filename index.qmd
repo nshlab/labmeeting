@@ -1,34 +1,45 @@
 ---
-title: "Fall 2025"
+title: "Spring 2026"
 section-divs: false
 sidebar: false
 ---
 
 ## Meeting Schedule
 
-| Date        | Room    | Topic                                                           | Reading                            | Presenter |
-| ----------- | ------- | --------------------------------------------------------------- | ---------------------------------- | --------- |
-| 8^th^ Sep.  | 2-426   | tail and concentration bounds, uniform laws of large numbers    | @wainwright2019highdim: Ch. 2, 4   | SB        |
-| 22^nd^ Sep. | 2-426   | metric entropy, minimax lower bounds                            | @wainwright2019highdim: Ch. 5, 15  | HL        |
-| 6^th^ Oct.  | 2-426   | regularized regression and M-estimation                         | @wainwright2019highdim: Ch. 7, 9   | CT        |
-| 20^th^ Oct. | 2-426   | RKHS, non-parametric least squares                              | @wainwright2019highdim: Ch. 12, 13 | CJ        |
-| 3^rd^ Nov.  | 2-426   | non-parametric least squares, supervised learning  | @wainwright2019highdim: 13, @hardt2022patterns Ch. 3     | CJ, NSH   |
-| 17^th^ Nov. | 2-426   | representations and features, optimization                                   | @hardt2022patterns Ch. 4, 5        | SB        |
-| 8^th^ Dec.  | FXB-G03 | generalization, deep learning              | @hardt2022patterns Ch. 6, 7      | CT        |
+| Date        | Room  | Topic | Reading                       | Presenter |
+| ----------- | ----- | ----- | ----------------------------- | --------- |
+| 26^th^ Jan. | 2-426 |       | @bach2024learning: Ch. 1, 2   |           |
+| 2^nd^ Feb.  | 2-426 |       | connections with research      |           |
+| 9^th^ Feb.  | 2-426 |       | @bach2024learning: Ch. 3, 4   |           |
+| 16^th^ Feb. | 2-426 |       | connections with research      |           |
+| 23^rd^ Feb. | 2-426 |       | @bach2024learning: Ch. 5, 6   |           |
+| 2^nd^ Mar.  | 2-426 |       | connections with research      |           |
+| 9^th^ Mar.  | 2-426 |       | @bach2024learning: Ch. 7, 8   |           |
+| 16^th^ Mar. | 2-426 |       | connections with research      |           |
+| 23^rd^ Mar. | 2-426 |       | @bach2024learning: Ch. 9, 10  |           |
+| 30^th^ Mar. | 2-426 |       | connections with research      |           |
+| 6^th^ Apr.  | 2-426 |       | @bach2024learning: Ch. 11, 12 |           |
+| 13^th^ Apr. | 2-426 |       | connections with research      |           |
+| 20^th^ Apr. | 2-426 |       | tbd                              |           |
+| 27^th^ Apr. | 2-426 |       | connections with research                              |           |
+| 4^th^ May   | 2-426 |       | tbd                              |           |
 
-: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, *usually* in HSPH 2-426.
+: We will meet *weekly* **on Mondays**, 3:00-05:00PM.
 
-In the Fall 2025 term, we will discuss topics in high-dimensional statistics
-and statistical machine learning, with material drawn from the texts
-@wainwright2019highdim and @hardt2022patterns (see details below). We will
-continue along this theme in the Spring 2026 term.
+In the Spring 2026 term, we will continue to discuss topics in statistical
+learning theory and statistical machine learning, with material to be drawn
+from the texts @bach2024learning, @bickel2015mathematical, and
+@duchi2024statistics (see details below).
 
-- @wainwright2019highdim: Ch. 2 (tail and concentration bounds), 4
-  (uniform laws of large numbers), 5 (metric entropy), 7 (sparse linear
-  models), 9 (regularized M-estimators), 12 (RKHS, including kernel ridge
-  regression), 13 (non-parametric least squares), 15 (minimax lower bounds)
-- @hardt2022patterns: Ch. 3 (supervised learning), 4 (representation and
-  features), 5 (optimization), 6 (generalization), 7 (deep learning)
+- @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
+  learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
+  (optimization for machine learning), 6 (local averaging methods), 7 (kernel
+  methods), 8 (sparse methods), 9 (neural networks), 10 (ensemble learning),
+  11 (from online learning to bandits), 12 (over-parametrized models)
+- @bickel2015mathematical: Ch. 7 (tools for asymptotic analysis), 9 (inference
+  in semi-parametric models), 12 (prediction and machine learning)
+- @duchi2024statistics: Ch. 2 (basics of information theory), 4 (concentration
+  inequalities), 5 (generalization and stability), 8 (minimax lower bounds),
 
 ## References
 
