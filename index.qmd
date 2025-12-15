@@ -8,23 +8,23 @@ sidebar: false
 
 | Date        | Room  | Topic | Reading                       | Presenter |
 | ----------- | ----- | ----- | ----------------------------- | --------- |
-| 26^th^ Jan. | 2-426 |       | @bach2024learning: Ch. 1, 2   |           |
-| 2^nd^ Feb.  | 2-426 |       | connections with research      |           |
-| 9^th^ Feb.  | 2-426 |       | @bach2024learning: Ch. 3, 4   |           |
-| 16^th^ Feb. | 2-426 |       | connections with research      |           |
-| 23^rd^ Feb. | 2-426 |       | @bach2024learning: Ch. 5, 6   |           |
-| 2^nd^ Mar.  | 2-426 |       | connections with research      |           |
-| 9^th^ Mar.  | 2-426 |       | @bach2024learning: Ch. 7, 8   |           |
-| 16^th^ Mar. | 2-426 |       | connections with research      |           |
-| 23^rd^ Mar. | 2-426 |       | @bach2024learning: Ch. 9, 10  |           |
-| 30^th^ Mar. | 2-426 |       | connections with research      |           |
-| 6^th^ Apr.  | 2-426 |       | @bach2024learning: Ch. 11, 12 |           |
-| 13^th^ Apr. | 2-426 |       | connections with research      |           |
-| 20^th^ Apr. | 2-426 |       | tbd                              |           |
-| 27^th^ Apr. | 2-426 |       | connections with research                              |           |
+| 26^th^ January | 2-426 |       | @bach2024learning: Ch. 1, 2   |           |
+| 2^nd^ February  | 2-426 |       | connections with research      |           |
+| 9^th^ February  | 2-426 |       | @bach2024learning: Ch. 3, 4   |           |
+| 16^th^ February | 2-426 |       | connections with research      |           |
+| 23^rd^ February | 2-426 |       | @bach2024learning: Ch. 5, 6   |           |
+| 2^nd^ March  | 2-426 |       | connections with research      |           |
+| 9^th^ March  | 2-426 |       | @bach2024learning: Ch. 7, 8   |           |
+| ~~16^th^ March~~ | ~~2-426~~ |       | *canceled*---spring break      |           |
+| 23^rd^ March | 2-426 |       | @bach2024learning: Ch. 9, 10  |           |
+| 30^th^ March | 2-426 |       | connections with research      |           |
+| 6^th^ April  | 2-426 |       | @bach2024learning: Ch. 11, 12 |           |
+| 13^th^ April | 2-426 |       | connections with research      |           |
+| 20^th^ April | 2-426 |       | tbd                              |           |
+| 27^th^ April | 2-426 |       | connections with research                              |           |
 | 4^th^ May   | 2-426 |       | tbd                              |           |
 
-: We will meet *weekly* **on Mondays**, 3:00-05:00PM.
+: Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
 
 In the Spring 2026 term, we will continue to discuss topics in statistical
 learning theory and statistical machine learning, with material to be drawn
