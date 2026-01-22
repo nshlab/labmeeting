@@ -28,12 +28,12 @@ sidebar: false
 : Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
 
 This term, we will continue to discuss topics in statistical learning theory
-and statistical machine learning, primarily drawing material from the text
+and statistical machine learning, primarily drawing material from the text by
 @bach2024learning, possibly to be supplemented by topics covered in others
 [e.g., @bickel2015mathematical; @duchi2024statistics]. Note that we will switch
-weekly between presentations of materials from the texts and informal research
-talks that cover the relationship between topics most recently discussed and
-ongoing projects in this group.
+weekly between presentations of materials from the relevant texts and informal
+research presentations that cover the relationship between topics most recently
+discussed and ongoing projects in this group.
 
 - @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
   learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
