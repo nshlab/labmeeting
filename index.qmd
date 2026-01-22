@@ -11,25 +11,29 @@ sidebar: false
 | 26^th^ January | 2-426 | kickoff meeting |    | NSH |
 | 2^nd^ February  | 2-426 | mathematics for ML, supervised learning | @bach2024learning: Ch. 1, 2 |           |
 | 9^th^ February  | 2-426 | research connections  |    |           |
+| ~~16^th^ February~~ | ~~2-426~~ |       | *canceled*---presidents' day      |           |
 | 16^th^ February | 2-426 | linear least-squares, empirical risk minimization | @bach2024learning: Ch. 3, 4 |           |
 | 23^rd^ February | 2-426 | research connections | |           |
-| 2^nd^ March  | 2-426 | optimization for ML, local averaging methods | @bach2024learning: Ch. 5, 6 |           |
+| 2^nd^ March  | 2-426 | optimization for ML | @bach2024learning: Ch. 5 |           |
 | 9^th^ March  | 2-426 | research connections | |           |
 | ~~16^th^ March~~ | ~~2-426~~ |       | *canceled*---spring break      |           |
-| 23^rd^ March | 2-426 | kernel methods, sparse methods | @bach2024learning: Ch. 7, 8 |           |
+| 23^rd^ March | 2-426 | local averaging methods, kernel methods | @bach2024learning: Ch. 6, 7 |           |
 | 30^th^ March | 2-426 | research connections | |           |
-| 6^th^ April  | 2-426 | neural networks, ensemble learning | @bach2024learning: Ch. 9, 10 |           |
+| 6^th^ April  | 2-426 | sparse methods, neural networks | @bach2024learning: Ch. 8, 9 |           |
 | 13^th^ April | 2-426 | research connections |  |           |
-| 20^th^ April | 2-426 | online learning, bandits, overparametrized models | @bach2024learning: Ch. 11, 12 |           |
+| 20^th^ April | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 |           |
 | 27^th^ April | 2-426 | research connections |                               |           |
 | 4^th^ May   | 2-426 |       |                               |           |
 
 : Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
 
-In the Spring 2026 term, we will continue to discuss topics in statistical
-learning theory and statistical machine learning, with material to be drawn
-from the texts @bach2024learning, @bickel2015mathematical, and
-@duchi2024statistics (see details below).
+This term, we will continue to discuss topics in statistical learning theory
+and statistical machine learning, primarily drawing material from the text
+@bach2024learning, possibly to be supplemented by topics covered in others
+[e.g., @bickel2015mathematical; @duchi2024statistics]. Note that we will switch
+weekly between presentations of materials from the texts and informal research
+talks that cover the relationship between topics most recently discussed and
+ongoing projects in this group.
 
 - @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
   learning), 3 (linear least-squares), 4 (empirical risk minimization), 5

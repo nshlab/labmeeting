@@ -18,10 +18,10 @@ sidebar: false
 
 : Note: We will meet biweekly **on Mondays**, 10:00AM-12:00PM, *usually* in HSPH 2-426.
 
-In the Fall 2025 term, we will discuss topics in high-dimensional statistics
-and statistical machine learning, with material drawn from the texts
+This term, we will discuss topics in high-dimensional statistics and
+statistical machine learning, with material drawn from the texts
 @wainwright2019highdim and @hardt2022patterns (see details below). We will
-continue along this theme in the Spring 2026 term.
+continue along this theme in the following term.
 
 - @wainwright2019highdim: Ch. 2 (tail and concentration bounds), 4
   (uniform laws of large numbers), 5 (metric entropy), 7 (sparse linear
