@@ -7,22 +7,22 @@ sidebar: false
 ## Meeting Schedule
 
 | Date        | Room  | Topic | Reading                       | Presenter |
-| ----------- | ----- | ----- | ----------------------------- | --------- |
-| 26^th^ January | 2-426 |       | @bach2024learning: Ch. 1, 2   |           |
-| 2^nd^ February  | 2-426 |       | connections with research      |           |
-| 9^th^ February  | 2-426 |       | @bach2024learning: Ch. 3, 4   |           |
-| 16^th^ February | 2-426 |       | connections with research      |           |
-| 23^rd^ February | 2-426 |       | @bach2024learning: Ch. 5, 6   |           |
-| 2^nd^ March  | 2-426 |       | connections with research      |           |
-| 9^th^ March  | 2-426 |       | @bach2024learning: Ch. 7, 8   |           |
+| ----------------- | ----- | ---------------------------- | ----------------------------- | --------- |
+| 26^th^ January | 2-426 | kickoff meeting |    | NSH |
+| 2^nd^ February  | 2-426 | mathematics for ML, supervised learning | @bach2024learning: Ch. 1, 2 |           |
+| 9^th^ February  | 2-426 | research connections  |    |           |
+| 16^th^ February | 2-426 | linear least-squares, empirical risk minimization | @bach2024learning: Ch. 3, 4 |           |
+| 23^rd^ February | 2-426 | research connections | |           |
+| 2^nd^ March  | 2-426 | optimization for ML, local averaging methods | @bach2024learning: Ch. 5, 6 |           |
+| 9^th^ March  | 2-426 | research connections | |           |
 | ~~16^th^ March~~ | ~~2-426~~ |       | *canceled*---spring break      |           |
-| 23^rd^ March | 2-426 |       | @bach2024learning: Ch. 9, 10  |           |
-| 30^th^ March | 2-426 |       | connections with research      |           |
-| 6^th^ April  | 2-426 |       | @bach2024learning: Ch. 11, 12 |           |
-| 13^th^ April | 2-426 |       | connections with research      |           |
-| 20^th^ April | 2-426 |       | tbd                              |           |
-| 27^th^ April | 2-426 |       | connections with research                              |           |
-| 4^th^ May   | 2-426 |       | tbd                              |           |
+| 23^rd^ March | 2-426 | kernel methods, sparse methods | @bach2024learning: Ch. 7, 8 |           |
+| 30^th^ March | 2-426 | research connections | |           |
+| 6^th^ April  | 2-426 | neural networks, ensemble learning | @bach2024learning: Ch. 9, 10 |           |
+| 13^th^ April | 2-426 | research connections |  |           |
+| 20^th^ April | 2-426 | online learning, bandits, overparametrized models | @bach2024learning: Ch. 11, 12 |           |
+| 27^th^ April | 2-426 | research connections |                               |           |
+| 4^th^ May   | 2-426 |       |                               |           |
 
 : Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
 
