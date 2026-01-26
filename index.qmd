@@ -9,7 +9,7 @@ sidebar: false
 | Date        | Room  | Topic | Reading                       | Presenter |
 | ----------------- | ----- | ---------------------------- | ----------------------------- | --------- |
 | 2^nd^ February | 2-426 | kickoff meeting |    | NSH |
-| 9^th^ February  | 2-426 | mathematics for ML, supervised learning | @bach2024learning: Ch. 1, 2 |           |
+| 9^th^ February  | 2-426 | mathematics for ML, supervised learning | @bach2024learning: Ch. 1, 2 | SB |
 | ~~16^th^ February~~  | ~~2-426~~ | [***canceled***---presidents' day]{.underline}  |    |  |
 | 23^rd^ February | 2-426 | linear least-squares, empirical risk minimization | @bach2024learning: Ch. 3, 4 |           |
 | 2^nd^ March  | 2-426 | research connections | |           |
