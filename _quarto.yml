@@ -33,7 +33,7 @@ website:
   open-graph: true
   reader-mode: false
   page-footer:
-    left: "&copy; 2024--2025 [Nima Hejazi](https://nimahejazi.org)"
+    left: "&copy; 2024--2026 [Nima Hejazi](https://nimahejazi.org)"
     center: "last updated: {{< meta date >}}"
     right: "built with [quarto](https://quarto.org)"
   site-url: "https://lab.nimahejazi.org/labmeeting/"

@@ -5,5 +5,5 @@ Built with [Quarto](https://quarto.org/docs/websites/) and deployed via
 
 ## license
 
-&copy; 2024-2025 [Nima Hejazi](https://nimahejazi.org). The contents of this
+&copy; 2024-2026 [Nima Hejazi](https://nimahejazi.org). The contents of this
 repository are distributed under the MIT license.
