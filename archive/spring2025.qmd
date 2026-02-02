@@ -1,5 +1,5 @@
 ---
-title: "Spring 2025"
+title: "2025 Spring"
 section-divs: false
 sidebar: false
 ---
