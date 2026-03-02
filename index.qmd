@@ -15,13 +15,13 @@ sidebar: false
 | 2^nd^ March | 2-426 | linear least-squares, empirical risk minimization | @bach2024learning: Ch. 3, 4 | SVB |
 | 9^th^ March | 2-426 | research connections | | NB |
 | ~~16^th^ March~~ | ~~2-426~~ | [***canceled***---spring break]{.underline}  |      |           |
-| 23^rd^ March | 2-426 | optimization for ML | @bach2024learning: Ch. 5 | CJ |
+| 23^rd^ March | 2-426 | optimization for ML | @bach2024learning: Ch. 5 | CT |
 | 30^th^ March | 2-426 | research connections | | SVB |
 | 6^th^ April | 2-426 | local averaging methods, kernel methods | @bach2024learning: Ch. 6, 7 | NH |
 | 13^th^ April | 2-426 | research connections | | SJB |
 | 20^th^ April | 2-426 | sparse methods, neural networks | @bach2024learning: Ch. 8, 9  | NB |
 | 27^th^ April | 2-426 | research connections | | CJ |
-| 4^th^ May | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 | CT |
+| 4^th^ May | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 | CJ |
 | 11^th^ May | 2-426 | research connections |                               | NH |
 
 : Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
