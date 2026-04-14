@@ -19,10 +19,11 @@ sidebar: false
 | 30^th^ March | 2-426 | research connections | | SVB |
 | 6^th^ April | 2-426 | local averaging methods, kernel methods | @bach2024learning: Ch. 6, 7 | NH |
 | 13^th^ April | 2-426 | research connections | | SJB |
-| 20^th^ April | 2-426 | sparse methods, neural networks | @bach2024learning: Ch. 8, 9  | NB |
-| 27^th^ April | 2-426 | research connections | | CJ |
-| 4^th^ May | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 | CJ |
-| 11^th^ May | 2-426 | research connections |                               | NH |
+| 20^th^ April | 2-426 | [***canceled***---patriots' day]{.underline} | | |
+| 27^th^ April | 2-426 | sparse methods, neural networks | @bach2024learning: Ch. 8, 9  | NB |
+| 4^th^ May | 2-426 | research connections | | CJ |
+| 11^th^ May | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 | CJ |
+| 18^th^ May | 2-426 | research connections |                               | NH |
 
 : Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
 
