@@ -28,18 +28,18 @@ sidebar: false
 2-426 (except for on 22^nd^ September).]{.underline}
 
 Our theme this term is [*foundations of causal machine learning*]{.underline},
-with a focus on contemporary frameworks, particularly targeted learning
+with a heavy focus on contemporary frameworks, particularly targeted learning
 [@vdl2006targeted; @gruber2010bounded; @vdl2011targeted] to construct
-asymptotically linear estimators of pathwise differentiable statistical
-parameters and double machine learning for Neyman orthogonal statistical
+asymptotically efficient estimators of pathwise differentiable statistical
+parameters and double machine learning for Neyman-orthogonal statistical
 parameters [@chernozhukov2018double; @foster2023orthogonal]. To deepen our
 perspective, we will consider topics that cut across these frameworks and
 stretch into semi-parametric efficiency theory, including doubly robust
 inference [@benkeser2017doubly], the relationship between pathwise
-differentiability and Neyman orthognality [@chen2026equivalence], and advances
-in the estimation of nuisance functions [@mccartan2026gaussian]. As with
-[Spring 2026](archive/spring2026.qmd), meetings will alternate weekly between
-chalk-talk presentations of the assigned readings and informal
+differentiability and Neyman orthogonality [@chen2026equivalence], and recent
+advances in the estimation of nuisance functions [@mccartan2026gaussian]. Just
+as with [Spring 2026](archive/spring2026.qmd), meetings will alternate weekly
+between chalk-talk presentations of the assigned readings and informal
 research-connection talks intended to explore overlap between this theme and
 areas of ongoing research in our group.
 
@@ -48,14 +48,15 @@ replace readings in the above list (pending group discussion) or otherwise
 serve as potential readings for Spring 2027.
 
 - **Classics in semi-parametric theory**: @klaassen1987consistent,
-  @robins1995semiparametric
+  @robins1994estimation, @robins1995semiparametric, @bang2005doubly
 - **Efficient inference in time-varying, longitudinal settings**:
   @diaz2021nonparametric, @luedtke2018sequential, @diaz2024causal,
   @diaz2026modified, @murphy2003optimal, @rotnitzky2017multiply
 * **Frontier topics (function estimation, adaptive inference, and more)**:
-  @westling2020causal, @kennedy2023towards, @chernozhukov2024conditional,
-  @lan2024causal, @vanderlaan2025automatic, @luedtke2024onestep,
-  @vanderlaan2026calibeating, @liu2017semiparametric, @liu2020nearly
+  @vdl2014targeted, @vdl2006statistical, @kennedy2023towards,
+  @westling2020causal, @chernozhukov2024conditional, @lan2024causal,
+  @vanderlaan2025automatic, @luedtke2024onestep, @vanderlaan2026calibeating,
+  @liu2017semiparametric, @liu2020nearly
 
 
 ## References
