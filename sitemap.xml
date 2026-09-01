@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lab.nimahejazi.org/labmeeting/index.html</loc>
-    <lastmod>2026-04-14T13:11:06.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lab.nimahejazi.org/labmeeting/archive/fall2025.html</loc>
-    <lastmod>2026-04-14T13:11:06.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lab.nimahejazi.org/labmeeting/archive/fall2024.html</loc>
-    <lastmod>2026-04-14T13:11:06.550Z</lastmod>
+    <lastmod>2026-09-01T03:18:35.479Z</lastmod>
   </url>
   <url>
     <loc>https://lab.nimahejazi.org/labmeeting/archive/spring2025.html</loc>
-    <lastmod>2026-04-14T13:11:06.551Z</lastmod>
+    <lastmod>2026-09-01T03:18:35.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lab.nimahejazi.org/labmeeting/archive/fall2024.html</loc>
+    <lastmod>2026-09-01T03:18:35.478Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lab.nimahejazi.org/labmeeting/archive/fall2025.html</loc>
+    <lastmod>2026-09-01T03:18:35.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lab.nimahejazi.org/labmeeting/archive/spring2026.html</loc>
+    <lastmod>2026-09-01T03:18:35.479Z</lastmod>
   </url>
 </urlset>
