@@ -1,49 +1,60 @@
 ---
-title: "2026 Spring"
+title: "2026 Fall"
 section-divs: false
 sidebar: false
 ---
 
 ## Meeting Schedule
 
-| Date        | Room  | Topic | Reading                       | Presenter |
-| ----------------- | ----- | ---------------------------- | ----------------------------- | --------- |
-| 2^nd^ February | 2-426 | kickoff meeting |    | NSH |
-| 9^th^ February | 2-426 | mathematics for ML, supervised learning | @bach2024learning: Ch. 1, 2 | SJB |
-| ~~16^th^ February~~  | ~~2-426~~ | [***canceled***---presidents' day]{.underline}  |    |  |
-| ~~23^rd^ February~~ | ~~2-426~~ | [***canceled***---winter was here]{.underline} |  |  |
-| 2^nd^ March | 2-426 | linear least-squares, empirical risk minimization | @bach2024learning: Ch. 3, 4 | SVB |
-| 9^th^ March | 2-426 | research connections | | NB |
-| ~~16^th^ March~~ | ~~2-426~~ | [***canceled***---spring break]{.underline}  |      |           |
-| 23^rd^ March | 2-426 | optimization for ML | @bach2024learning: Ch. 5 | CT |
-| 30^th^ March | 2-426 | research connections | | SVB |
-| 6^th^ April | 2-426 | local averaging methods, kernel methods | @bach2024learning: Ch. 6, 7 | NH |
-| 13^th^ April | 2-426 | research connections | | SJB |
-| 20^th^ April | 2-426 | [***canceled***---patriots' day]{.underline} | | |
-| 27^th^ April | 2-426 | sparse methods, neural networks | @bach2024learning: Ch. 8, 9  | NB |
-| 4^th^ May | 2-426 | research connections | | CJ |
-| 11^th^ May | 2-426 | ensemble learning, online learning and bandits | @bach2024learning: Ch. 10, 11 | CJ |
-| 18^th^ May | 2-426 | research connections |                               | NH |
+| Date              | Room      | Topic | Reading | Presenter |
+| ----------------- | --------- | ---------------------- | --------------- | --------- |
+| 8^th^ September | 2-426 | kickoff meeting | | NSH |
+| 15^th^ September | 2-426 | foundations of targeted maximum likelihood | @vdl2006targeted; and Appx. A.1--A.3 of @vdl2011targeted | |
+| 22^nd^ September | **2-401** | research connections | | |
+| 29^th^ September | 2-426 | foundations of targeted maximum likelihood | @gruber2010bounded; and Appx. A.4--A.6 of @vdl2011targeted | |
+| 6^th^ October | 2-426 | research connections | | |
+| 13^th^ October | 2-426 | double machine learning | @chernozhukov2018double | |
+| 20^th^ October | 2-426 | research connections | | |
+| 27^th^ October | 2-426 | orthogonal statistical learning | @foster2023orthogonal | |
+| 3^rd^ November | 2-426 | research connections | | |
+| 10^th^ November | 2-426 | doubly robust inference | @benkeser2017doubly | |
+| 17^th^ November | 2-426 | research connections | | |
+| ~~24^th^ November~~ | ~~2-426~~ | [***canceled***---thanksgiving]{.underline} | | |
+| 1^st^ December | 2-426 | research connections | | |
+| 8^th^ December | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | |
+| 15^th^ December | 2-426 | Gaussian process limit of BART | @mccartan2026gaussian | SVB |
 
-: Note: [We will meet ***weekly on Mondays, 3:00-05:00PM***.]{.underline}
+: Note: [We will meet ***weekly on Tuesdays, 2:00--4:00PM***, almost always in
+2-426 (except for on 22^nd^ September).]{.underline}
 
-This term, we will continue to discuss topics in statistical learning theory
-and statistical machine learning, primarily drawing material from the text by
-@bach2024learning, possibly to be supplemented by topics covered in others
-[e.g., @bickel2015mathematical; @duchi2024statistics]. Note that we will switch
-weekly between presentations of materials from the relevant texts and informal
-research presentations that cover the relationship between topics most recently
-discussed and ongoing projects in this group.
+Our theme thie term is *foundations of causal machine learning*, cutting across
+modern frameworks from targeted learning [@vdl2006targeted; @gruber2010bounded;
+@vdl2011targeted] to construct asymptotically linear estimators of pathwise
+differentiable statistical parameters to Neyman orthogonality and double
+machine learning [@chernozhukov2018double; @foster2023orthogonal]. To deepen
+our perspective, we will also consider common areas of study between these,
+including doubly robust inference [@benkeser2017doubly], the relationship
+between pathwise differentiability and Neyman orthognality
+[@chen2026equivalence], and recent advances in the estimation of nuisance
+functions [@mccartan2026gaussian]. As with [Spring
+2026](archive/spring2026.qmd), we alternate weekly between presentations of the
+assigned readings and informal research-connection talks covering the
+relationship between recently discussed topics and ongoing projects in our
+group.
 
-- @bach2024learning: Ch. 1 (mathematical preliminaries), 2 (supervised
-  learning), 3 (linear least-squares), 4 (empirical risk minimization), 5
-  (optimization for machine learning), 6 (local averaging methods), 7 (kernel
-  methods), 8 (sparse methods), 9 (neural networks), 10 (ensemble learning),
-  11 (from online learning to bandits), 12 (over-parametrized models)
-- @bickel2015mathematical: Ch. 7 (tools for asymptotic analysis), 9 (inference
-  in semi-parametric models), 12 (prediction and machine learning)
-- @duchi2024statistics: Ch. 2 (basics of information theory), 4 (concentration
-  inequalities), 5 (generalization and stability), 8 (minimax lower bounds),
+Time permitting, we may discuss additional topics---listed below---which may
+replace readings in the above list (pending group discussion) or otherwise
+serve as potential readings for Spring 2027.
+
+- **Classics in semi-parametric theory**: @klaassen1987consistent,
+  @robins1995semiparametric
+- **Inference in time-varying, longitudinal settings**: @westling2020causal,
+  @diaz2021nonparametric, @luedtke2018sequential, @diaz2024causal,
+  @diaz2026modified, @murphy2003optimal, @rotnitzky2017multiply
+* **Function estimation, adaptive inference, and frontier topics**:
+  @kennedy2023towards, @chernozhukov2024conditional
+  @lan2024causal, @vanderlaan2025automatic, @luedtke2024onestep,
+  @liu2017semiparametric, @liu2020nearly
 
 ## References
 
