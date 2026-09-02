@@ -9,7 +9,7 @@ sidebar: false
 | Date              | Room      | Topic | Reading | Presenter |
 | ----------------- | --------- | ---------------------- | --------------- | --------- |
 | 8^th^ September | 2-426 | kickoff meeting | | NSH |
-| 15^th^ September | 2-426 | foundations of targeted maximum likelihood | @vdl2006targeted; and Appx. A.1--A.3 of @vdl2011targeted | |
+| 15^th^ September | 2-426 | foundations of targeted maximum likelihood | @vdl2006targeted; and Appx. A.1--A.3 of @vdl2011targeted | NB |
 | 22^nd^ September | **2-401** | research connections | | |
 | 29^th^ September | 2-426 | foundations of targeted maximum likelihood | @gruber2010bounded; and Appx. A.4--A.6 of @vdl2011targeted | |
 | 6^th^ October | 2-426 | research connections | | |
