@@ -21,8 +21,8 @@ sidebar: false
 | 17^th^ November | 2-426 | research connections | | |
 | ~~24^th^ November~~ | ~~2-426~~ | [***canceled***---thanksgiving]{.underline} | | |
 | 1^st^ December | 2-426 | research connections | | |
-| 8^th^ December | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | |
-| 15^th^ December | 2-426 | Gaussian process limit of BART | @mccartan2026gaussian | SVB |
+| 8^th^ December | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | SJB |
+| 15^th^ December | 2-426 | On the Gaussian process limit of BART | @mccartan2026gaussian | SVB |
 
 : Note: [We will meet ***weekly on Tuesdays, 2:00--4:00PM***, almost always in
 2-426 (except for on 22^nd^ September).]{.underline}
