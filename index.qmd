@@ -10,17 +10,17 @@ sidebar: false
 | ----------------- | --------- | ---------------------- | --------------- | --------- |
 | 8^th^ September | 2-426 | kickoff meeting | | NSH |
 | 15^th^ September | 2-426 | foundations of targeted maximum likelihood | @vdl2006targeted; and Appx. A.1--A.3 of @vdl2011targeted | NB |
-| 22^nd^ September | **2-401** | research connections | | |
-| 29^th^ September | 2-426 | foundations of targeted maximum likelihood | @gruber2010bounded; and Appx. A.4--A.6 of @vdl2011targeted | |
-| 6^th^ October | 2-426 | research connections | | |
-| 13^th^ October | 2-426 | double machine learning | @chernozhukov2018double | |
-| 20^th^ October | 2-426 | research connections | | |
-| 27^th^ October | 2-426 | orthogonal statistical learning | @foster2023orthogonal | |
-| 3^rd^ November | 2-426 | research connections | | |
-| 10^th^ November | 2-426 | doubly robust inference | @benkeser2017doubly | |
-| 17^th^ November | 2-426 | research connections | | |
+| 22^nd^ September | **2-401** | research connections | | SVB |
+| 29^th^ September | 2-426 | foundations of targeted maximum likelihood | @gruber2010bounded; and Appx. A.4--A.6 of @vdl2011targeted | CT |
+| ~~6^th^ October~~ | ~~2-426~~ | ***canceled*** | | |
+| 13^th^ October | 2-426 | double machine learning | @chernozhukov2018double | CT |
+| 20^th^ October | 2-426 | research connections | | NB |
+| 27^th^ October | 2-426 | orthogonal statistical learning | @foster2023orthogonal | SVB |
+| 3^rd^ November | 2-426 | research connections | | CT |
+| 10^th^ November | 2-426 | doubly robust inference | @benkeser2017doubly | NB |
+| 17^th^ November | 2-426 | research connections | | CJ |
 | ~~24^th^ November~~ | ~~2-426~~ | [***canceled***---thanksgiving]{.underline} | | |
-| 1^st^ December | 2-426 | research connections | | |
+| 1^st^ December | 2-426 | research connections | | CT |
 | 8^th^ December | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | SJB |
 | 15^th^ December | 2-426 | On the Gaussian process limit of BART | @mccartan2026gaussian | SVB |
 
