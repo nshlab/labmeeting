@@ -17,11 +17,11 @@ sidebar: false
 | 20^th^ October | 2-426 | research connections | | NB |
 | 27^th^ October | 2-426 | orthogonal statistical learning | @foster2023orthogonal | SVB |
 | 3^rd^ November | 2-426 | research connections | | CT |
-| 10^th^ November | 2-426 | doubly robust inference | @benkeser2017doubly | NB |
+| 10^th^ November | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | NB |
 | 17^th^ November | 2-426 | research connections | | CJ |
 | ~~24^th^ November~~ | ~~2-426~~ | [***canceled***---thanksgiving]{.underline} | | |
 | 1^st^ December | 2-426 | research connections | | CT |
-| 8^th^ December | 2-426 | Neyman orthogonality and pathwise differentiability | @chen2026equivalence | SJB |
+| 8^th^ December | 2-426 | doubly robust inference | @benkeser2017doubly | NSH |
 | 15^th^ December | 2-426 | On the Gaussian process limit of BART | @mccartan2026gaussian | SVB |
 
 : Note: [We will meet ***weekly on Tuesdays, 2:00--4:00PM***, almost always in
